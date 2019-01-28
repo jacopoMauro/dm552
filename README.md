@@ -21,15 +21,19 @@ to them in a manner that is independent of any specific language. The second
 module instead focus on one concrete language, Haskell, to allow students to get
 familiar with the functional programming paradigm.
 
-To complete the course the student has to pass a written exam having questions
-covering all the topics presented in class. The written exam will be evaluated
-using a 7 grades scale with the collaboration of an external examiner.
-
 ## Lecturer
 
 [Jacopo Mauro](https://imada.sdu.dk/~mauro/)
+
 Contact email: mauro@sdu.dk
+
 Office Ø13-604a-2
+
+## Teaching Assistant
+
+Jonas Bamse Andersen
+
+Contact email: jonan15@student.sdu.dk
 
 ## Course Material
 
@@ -39,7 +43,13 @@ The course will rely on the following two books:
 
 The additional course material is available on this git repository.
 Material that can not be made public will be available on the
-[Blackboard platform](https://e-learn.sdu.dk/). 
+[Blackboard platform](https://e-learn.sdu.dk/).
+
+## Exam
+
+To complete the course the student has to pass a written exam having questions
+covering all the topics presented in class. The written exam will be evaluated
+using a 7 grades scale with the collaboration of an external examiner.
 
 
 

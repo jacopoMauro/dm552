@@ -49,7 +49,10 @@ Material that can not be made public will be available on the
 
 To complete the course the student has to pass a written exam having questions
 covering all the topics presented in class. The written exam will be evaluated
-using a 7 grades scale with the collaboration of an external examiner.
+using a 7 grades scale with the collaboration of an external examiner. No
+external auxiliary material (e.g., books, personal notes) will be allowed to be
+used during the exam.
+
 
 
 

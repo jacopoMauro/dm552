@@ -5,6 +5,9 @@ To install Haskell locally please have a look at the
  It is possible also to use the container technology Docker,
  for more information see [here](https://hub.docker.com/_/haskell/).
 
+#### Exercises
+You can look at the exercises directly in GitHub, by clicking [exercises.org](exercises.org) or download the pdf.
+
 #### Online resources
 
 * [Hoogle: Search Haskell APIs by type!](https://www.haskell.org/hoogle/)

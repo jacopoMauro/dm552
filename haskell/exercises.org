@@ -158,21 +158,22 @@ e.g. ~lucky :: (Integral a) => a -> String~ it is a type declaration,
 but the interpreter can make reasonable guesses if you make reasonable functions that has 
 consistent input/output types.
 
+
+*** More pattern matching
 Write the following functions, they should behave similar to the functions they mimic, 
 but you should write your own version. Ask if you don't know how they should be computed.
 You can ignore bad cases or decide to return something that may or may not make sense.
 
 You may have to define auxilliary (extra/helper) functions.
 
-*** More pattern matching
-- ~head'~
-- ~tail'~
-- ~null'~
+- ~myhead~
+- ~mytail~
+- ~mynull~
 
-*** Recursive functions
-- ~last'~
-- ~length'~
-- ~take'~
-- ~maximum'~
-- ~sum'~
-- ~reverse'~
+**** Recursive functions
+- ~mylast~
+- ~mylength~
+- ~mytake~
+- ~mymaximum~
+- ~mysum~
+- ~myreverse~

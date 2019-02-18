@@ -5,6 +5,9 @@ To install Haskell locally please have a look at the
  It is possible also to use the container technology Docker,
  for more information see [here](https://hub.docker.com/_/haskell/).
 
+#### How-far-did-you-get-poll
+Click [HERE](http://www.strawpoll.me/17454704) to answer how far you got.
+
 #### Exercises
 You can look at the exercises directly in GitHub, by clicking e.g. [exercises_lists_funcs_patterns.org](exercises_lists_funcs_patterns.org) or download the pdf. A few mathematical formulas may show nicer in the pdf.
 

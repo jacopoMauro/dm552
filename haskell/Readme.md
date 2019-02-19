@@ -1,5 +1,8 @@
 In this folder you can find additional material related to Haskell.
 
+A pdf of the book \[LYH\] can be found at [https://github.com/clojurians-org/haskell-ebook/blob/master/Learn%20You%20a%20Haskell%20for%20Great%20Good!%20A%20Beginner's%20Guide.pdf](https://github.com/clojurians-org/haskell-ebook/blob/master/Learn%20You%20a%20Haskell%20for%20Great%20Good!%20A%20Beginner's%20Guide.pdf)
+
+#### Install
 To install Haskell locally please have a look at the
  [Haskell Platform](https://www.haskell.org/platform/).
  It is possible also to use the container technology Docker,

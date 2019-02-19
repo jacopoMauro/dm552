@@ -14,6 +14,8 @@ Click [HERE](http://www.strawpoll.me/17454704) to answer how far you got.
 #### Exercises
 You can look at the exercises directly in GitHub, by clicking e.g. [exercises_lists_funcs_patterns.org](exercises_lists_funcs_patterns.org) or download the pdf. A few mathematical formulas may show nicer in the pdf.
 
+If you are at Uni and need my help you may be able to find me at the TA office "Balkonen". [See on map](https://clients.mapsindoors.com/sdu/573f26e4bc1f571b08094312/details/563cb9b9423b7d0540c9a988).
+
 #### Online resources
 
 * [Hoogle: Search Haskell APIs by type!](https://www.haskell.org/hoogle/)

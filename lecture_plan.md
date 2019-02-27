@@ -7,4 +7,5 @@
    Homework: exercises 1.3, 1.5, 1.6, 1.7 from PL book.
 1. [13.02] Where, let in, as pattern (Chapter 3, LYH), types and type classes (Chapter 2, LYH).
 1. [26.02] BNF, operational semantics, undecidabilty, name, environment, blocks
-   until scoping rules (Chapter 2, 3 and beginning of 4, PL)  
+   until scoping rules (Chapter 2, 3 and beginning of 4, PL)
+1. [27.02] Higher order, lambda notation, map, filter, foldl, foldr (Chapter 5, LYH) 

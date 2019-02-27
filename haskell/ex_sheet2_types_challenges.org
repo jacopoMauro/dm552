@@ -22,11 +22,11 @@
 #+LATEX_COMPILER: pdflatex
 #+DATE: \today
 
-You can use ~:t~ in the interpreter to see the type of an expression, however, 
-try to use it only after you've thought about and maybe written down the type yourself!
+You can use ~:t~ in the interpreter to see the type of an expression, however, try to use it only after you've thought about and maybe written down the type yourself!
 
 * What is the type?
 Try to write the type of the following values
+
 - ~['a', 'b', 'c']~
 - ~('a', 'b', 'c')~
 - ~(True, 'a')~
@@ -37,8 +37,8 @@ Try to write the type of the following values
 - ~[tail, reverse]~
 
 * What was the type?
-Try looking and some of the following functions that we have used previously, 
-and understand their types. Make your guess first, then check it with ~:t~.
+Try looking and some of the following functions that we have used previously, and understand their types, for now ignore the ~Foldable t~ constraint. Make your guess first, then check it with ~:t~.
+
 - ~length~
 - ~head~
 - ~null~
@@ -51,8 +51,8 @@ and understand their types. Make your guess first, then check it with ~:t~.
 - ~succ~
 
 * Make the function
-Write the type for the following functions, then implement them. 
-You are welcome to use functions you have seen or made previously (this does not include ~:t~).
+Write the type for the following functions, then implement them. You are welcome to use functions you have seen or made previously (this does not include ~:t~).
+
 - ~second~, takes a list and returns the second element.
 - ~secondLast~, takes a list and returns the second to last element, e.g. ~secondLast [1,2,3,4]~ is ~3~.
 - ~swap~, takes a 2-tuple and returns a tuple with the elements in reverse order.
@@ -64,6 +64,7 @@ You are welcome to use functions you have seen or made previously (this does not
 
 * What is the type? (2)
 Try to write the type of the following expressions. What do they do?
+
 - ~(+) 42~
 - ~(:) 3~
 - ~(,) 'x'~
@@ -71,28 +72,22 @@ Try to write the type of the following expressions. What do they do?
 
 * Suggest the type
 Suggest types for the following function definitions.
+
 - ~one x = 1~
 - ~apply f x = f x~
 - ~compose f g x = f ( g x )~
 
 * Show me what you're hiding
-We usually use ~show~ to turn something into a ~String~, 
-this is part of what implicitly happens in the interpreter, 
-so we can see the result on the screen. 
-You can try entering a function with no arguments in the interpreter to see an error about this, 
-because it doesn't know how to show a function.
+We usually use ~show~ to turn something into a ~String~, this is part of what implicitly happens in the interpreter, so we can see the result on the screen. You can try entering a function with no arguments in the interpreter to see an error about this, because it doesn't know how to show a function.
 
 - Try making a simple function that takes some input and returns a string that shows that input, e.g. ~plustalk~ that takes two integers and makes the string ~"x plus y is z"~ where ~x,y,z~ are the numbers in the calculation.
-- Make a function ~fizzbuzz~ that takes an integer and prints ~"Fizz"~ if the number is evenly divisible by 3, "Buzz" if it is divisible by 5, and "FizzBuzz" if it is divisible by both. Otherwise it returns the number as a string, which is done with the ~show~ function.
+- Make a function ~fizzbuzz~ that takes an integer and prints ~"Fizz"~ if the number is evenly divisible by 3, ~"Buzz"~ if it is divisible by 5, and ~"FizzBuzz"~ if it is divisible by both. Otherwise it returns the number as a string, which is done with the ~show~ function.
  - Use ~fizzbuzz~ in a list comprehension to see what happens on the first 30 integers.
 
 * Challenges
-Here are some challenges that should be possible with the part of the language we know currently. 
-Most are taken from https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems. 
-I've chosen the ones I found interesting, but you are welcome to go look, 
-and see if there are others you like.
+Here are some challenges that should be possible with the part of the language we know currently. Most are taken from https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems. I've chosen the ones I found interesting, but you are welcome to go look, and see if there are others you like.
 
-Note that they fluctuate in difficulty, they difficulty is not strictly increasing.
+Note that they fluctuate in difficulty, the difficulty is not strictly increasing.
 
 Implement the following.
 - ~compress~, takes a list and drops consecutive duplicates, e.g. ~compress [1,1,1,2,2,3,1,1,4]~ is ~[1,2,3,1,4]~.

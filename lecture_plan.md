@@ -13,9 +13,9 @@
 
 
 # Topics tackled during the Haskell exercise sessions
-For each session the parentheses show what the end goal of that session is. If you are behind that goal, you should practice at home!
+For each session the parentheses show what the end-goal of that session is. If you are behind that goal, you should practice at home! The curly braces show the corresponding chapters in LYH (pdf).
 
-1. [11.02] GHCi install, basics, function calls, basic lists. (Sheet 1, up until exercise 2.1.6.3 (included))
-1. [18.02] Ranges and infinite lists, pattern matching, simple recursion, tuples (The rest of sheet 1, exercise 2.1.6.4 through exercise 2.4.2, challenges are optional)
-1. [25.02] Quicksort, mergesort, types, more recursion (Sheet 2, up until exercise 3 (included))
+1. [11.02] GHCi install, basics, function calls, basic lists. (Sheet 1, up until exercise 2.1.6.3 (included)) {Chapter 1}
+1. [18.02] Ranges and infinite lists, pattern matching, simple recursion, tuples (The rest of sheet 1, exercise 2.1.6.4 through exercise 2.4.2, challenges are optional) {Chapters 1 & 3 (& 4)}
+1. [25.02] Quicksort, mergesort, types, more recursion (Sheet 2, up until exercise 3 (included), optionally challenges sheet 1) {Chapters 2 & 3 (& 4)}
 

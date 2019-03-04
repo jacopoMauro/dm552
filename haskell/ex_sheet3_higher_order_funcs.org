@@ -2,7 +2,7 @@
 #+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:nil e:t
 #+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
 #+OPTIONS: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
-#+TITLE: Exercises Higher order functions
+#+TITLE: Exercises Higher Order Functions
 #+DATE: <2019-02-05 Tue>
 #+AUTHOR: Bamse
 #+EMAIL: jonan15@student.sdu.dk
@@ -21,7 +21,7 @@
 #+LATEX_COMPILER: pdflatex
 #+DATE: \today
 
-This exercise sheet is all about higher order functions (functions that take functions as a parameter), the most important ones that you will get to understand are ~map, filter, foldl, foldr~.
+This exercise sheet is all about higher order functions (functions that take functions as a parameter), the most important ones that you will get to understand are ~map, filter, foldr, foldl~.
 
 * It begins
 ~map~ is often used in conjunction with a function that makes some transformation on an element. Use ~map~ to solve the following exercises, possibly using a helper function.
@@ -39,9 +39,18 @@ Remember that ~filter~ keeps the elements that match the predicate, rather than 
 - Come up with your own function that returns a bool and use it with ~filter~.
 - Recreate quicksort.
 
-Use ~foldl~ or ~foldr~ to solve the following exercises.
+To better understand what ~foldr~ and ~foldl~ does, try expanding the following expressions by hand, according to the pseudo definitions:
+
+~foldr f z [x1, x2, ..., xn] == x1 `f` (x2 `f` ... (xn `f` z)...)~
+
+~foldl f z [x1, x2, ..., xn] == (...((z `f` x1) `f` x2) `f`...) `f` xn~
+
+- ~foldr (||) False [False, True, False]~
+- ~foldl mod 1337 [1166, 86, 43]~
+
+Now try to use ~foldr~ or ~foldl~ to solve the following exercises.
 
 - Make your own ~sum~ function.
-- Make your own ~maximum~ function, you may use ~max~.
+- Make your own ~maximum~ function, you may use ~max~. Hint: assume numbers are >= 0.
 - Make your own ~reverse~ function. Hint: use ~flip~.
 

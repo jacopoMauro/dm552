@@ -188,6 +188,9 @@ Make a list of strings to use in the following.
 - Try using list comprehensions and/or functions to filter the persons, e.g. people starting with ~'A'~, or people with more than 5 letters in their name, or people older than 50.
 - Make a function with different patterns, which given a person (either the tuple or the two values), says something about that person, e.g. given a person starting with ~'A'~ , the function may respond with the string ~"You're in the A-club"~.
 
+Another exercise regarding people and ages:
+- Make a function that takes two triples ~(d,m,y)~ which represents two dates (day, month, year), a birthday and a "current" date, and returns a single integer that is their "current" age in whole years.
+
 *** More tuples
 This is an exercise where each step builds on top of the previous. 
 

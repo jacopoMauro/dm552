@@ -2,8 +2,8 @@ In this folder you can find additional material related to Haskell.
 
 #### How-far-did-you-get-poll
 
-Click [HERE](http://www.strawpoll.me/17516010) to answer how far you got.
-
+Click [HERE](https://www.strawpoll.me/17588270) to answer how far you got.
+[//]: # (http://www.strawpoll.me/17516010)
 [//]: # (http://www.strawpoll.me/17454704)
 
 #### Main book

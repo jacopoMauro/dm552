@@ -25,3 +25,4 @@ For each session the parentheses show what the end-goal of that session is. If y
 1. [18.02] Ranges and infinite lists, pattern matching, simple recursion, tuples (The rest of sheet 1, exercise 2.1.6.4 through exercise 2.4.2, challenges are optional) {Chapters 1 & 3 (& 4)}
 1. [25.02] Quicksort, mergesort, types, more recursion (Sheet 2, up until exercise 3 (included), optionally challenges sheet 1) {Chapters 2 & 3 (& 4)}
 1. [04.03] More types, challenges, beginning higher order functions (The rest of sheet 2, sheet 3 first exercise) {Chapters 2 & 5}
+1. [11.03] More higher order functions, modules, beginning of custom types (Sheet 3, up until exercise 3 (included)) {Chapters 5, 6 & 7}

@@ -12,7 +12,9 @@
 1. [05.03] Static and Dynamic scoping, activation record, stack, and heap (Chapter 4, 5, PL).
    Homework: exercises chapter 4.1-5
 1. [06.03] fold(r|l)1, $, function composition, modules, defining basic types,
-	 record notation  (Chapter 5,6, beginning of 7, LYH) 
+	 record notation  (Chapter 5,6, beginning of 7, LYH)
+1. [12.03] Heap, static and dynamic scoping implementations (Chapter 5, PL).
+	 Homework: exercises chapter 5.1-6
 
 
 

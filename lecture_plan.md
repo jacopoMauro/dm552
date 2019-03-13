@@ -15,6 +15,7 @@
 	 record notation  (Chapter 5,6, beginning of 7, LYH)
 1. [12.03] Heap, static and dynamic scoping implementations, expressions (Chapter 5, 6, PL).
 	 Homework: exercises chapter 5.1-6
+1. [13.03] Type parameters, classes and instances (Chapter 7, LYH).
 
 
 

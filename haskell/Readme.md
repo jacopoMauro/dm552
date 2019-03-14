@@ -5,7 +5,7 @@ In this folder you can find additional material related to Haskell.
 Click [HERE](https://www.strawpoll.me/17607885) to answer how far you got.
 
 
-[//]: # https://www.strawpoll.me/17588270) 
+[//]: # (https://www.strawpoll.me/17588270) 
 [//]: # (http://www.strawpoll.me/17516010)
 [//]: # (http://www.strawpoll.me/17454704)
 

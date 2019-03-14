@@ -2,10 +2,20 @@ In this folder you can find additional material related to Haskell.
 
 #### How-far-did-you-get-poll
 
-Click [HERE](https://www.strawpoll.me/17588270) to answer how far you got.
+Click [HERE](https://www.strawpoll.me/17607885) to answer how far you got.
 
+[//]: # https://www.strawpoll.me/17588270) 
 [//]: # (http://www.strawpoll.me/17516010)
 [//]: # (http://www.strawpoll.me/17454704)
+
+
+*Q: Why are you doing polls?*
+
+A: To determine if I should change something. I am in control of which exercises you are going to do, and the way you learn the most the fastest is, if you are challenged but not overwhelmed. Therefore, it is extremely important for me to know how far you are, so I can tailor the exercises to you.
+
+*Q: What if I don't like answering the poll?*
+
+A: Then don't, but please reconsider it, or tell my why you don't want to. I am definitely not trying to make a fool of you or anyone, and if the reason you don't want to answer is because you don't feel like you are very far, then there's even more reason to answer. Because, if I don't know you aren't very far, then I cannot know to slow down the pace, and the exercises very much rely on knowing everything before new things are introduced, so you probably won't be able to solve new exercises if you haven't made the old ones.
 
 #### Main book
 

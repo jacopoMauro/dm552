@@ -17,7 +17,8 @@
 	 Homework: exercises chapter 5.1,2,4,6
 1. [13.03] Type parameters, classes and instances (Chapter 7, LYH).
 1. [19.03] Expressions, Commands, Tail recursion, Passing by value and reference (Chapter 6, 7, PL).
-   Homeworks: exercises chapter 6.1, 6.5, 6.6.
+   Homeworks: exercises chapter 6.1, 6.5, 6.6
+1. [20.03] Type constructors, Functors, basics of IO (Chapter 7, Chapter 8, LYH).
 
 
 

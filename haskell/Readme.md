@@ -1,5 +1,10 @@
 In this folder you can find additional material related to Haskell.
 
+## Exercises you want covered
+
+[Click here to tell me what exercises you want covered.](https://forms.office.com/Pages/ResponsePage.aspx?id=fcKXmj64lEazU1S9vxirW2eG02KmIadBoEs1b65abe1UOEVMM1VRQVZHWEM4VjBIU0gzOVVSRzkyNS4u)
+
+
 #### How-far-did-you-get-poll
 
 Click [HERE](https://www.strawpoll.me/17607885) to answer how far you got.

@@ -30,3 +30,4 @@ For each session the parentheses show what the end-goal of that session is. If y
 1. [25.02] Quicksort, mergesort, types, more recursion (Sheet 2, up until exercise 3 (included), optionally challenges sheet 1) {Chapters 2 & 3 (& 4)}
 1. [04.03] More types, challenges, beginning higher order functions (The rest of sheet 2, sheet 3 first exercise) {Chapters 2 & 5}
 1. [11.03] More higher order functions, modules, beginning of custom types (Sheet 3, up until exercise 3 (included)) {Chapters 5, 6 & 7}
+1. [18.03] We covered exercises from theory on static vs. dynamic scoping, and activation records {**PL** chapter 4 & 5}

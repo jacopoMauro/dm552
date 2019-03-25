@@ -2,7 +2,7 @@
 #+OPTIONS: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:nil e:t
 #+OPTIONS: email:nil f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
 #+OPTIONS: tasks:t tex:t timestamp:t title:t toc:nil todo:t |:t
-#+TITLE: Exercises Higher Order Functions
+#+TITLE: Exercises Higher Order Functions, types and typeclasses
 #+DATE: <2019-02-05 Tue>
 #+AUTHOR: Bamse
 #+EMAIL: jonan15@student.sdu.dk
@@ -95,7 +95,7 @@ Complete the previous exercise in a file if you haven't already.
 ** Define your own
 Export some of your cool new functions as a module. Note: you should use the same name for your file as your module, e.g. you export a module ~MyFuncs~, that file should be named ~MyFuncs.hs~.
 
-Import and use your functions in another file. If you named your files correctly, you should be able to something like ~import MyFuncs~.
+Import and use your functions in another file. If you named your files correctly, you should be able to do something like ~import MyFuncs~.
 
 * Your own types
 It's time to start making your own types, here are some ideas for some types you can make, but you are welcome to try something else if you want. Remember to go read in LYH if you forgot something.
@@ -130,5 +130,74 @@ A person has a name, gender and age.
   - Given a list of persons, return a list of persons with voting rights.
   - Given a list of students, return a list of students with at least some average grade.
     - Make courses into a type as well, where courses have a name and a weight. Update the average to take the weight into account.
+
+
+* Playing games
+Here are some suggestions for games you can make, more or less with what you know at this point.
+
+** 1D Lights out
+Lights out is a game where you want to "turn off" all the lights, but when you toggle one light, you also toggle the neighbouring lights.
+
+A simple version of this works in just one dimension, and could be represented with a list of ~Bool~. 
+
+You can implement it however you want, but I think of it something like this:
+
+#+BEGIN_SRC <haskell>
+ghci> Lights [False,True,False]
+Lights [False,True,False]
+ghci> toggle (Lights [False,True,False]) 3
+Lights [False,False,True]
+#+END_SRC
+
+
+** Tic-tac-toe
+Tic-tac-toe is a bit larger of a project. I recommend looking up ~Data.Array~, as a help to representing the board. 
+
+Once you are far enough I also recommend making a custom implementation of ~show~, rather than just deriving it. 
+
+In my implementation I had the player pieces as a type with three possible values, where one was a "dummy" piece if no piece was at that spot. It could also be implemented with ~Maybe~ instead.
+
+
+* Your own typeclass
+Try to make your own typeclass, if you need inspiration you can try to make a ~CharLike~, ~Game~ or ~PlayerSet~ typeclass.
+
+** CharLike
+Instances of ~CharLike~ should be convertible into a ~Char~, e.g. if ~Bool~ is an instance, then ~True~ could be converted into ~'T'~ and ~False~ into ~'F'~.
+
+Make some instances of ~CharLike~. As a start make ~Char~ an instance.
+
+Add a function ~similar~ to the typeclass, that should see if the character representation of two ~CharLike~ things is the same.
+
+** Game
+A very simple ~Game~ typeclass might look something like this:
+
+#+BEGIN_SRC <haskell>
+class Game g where
+  isEnd :: g -> bool
+#+END_SRC
+
+To make the typeclass more useful you should probably add more functions, e.g. ~move~ or ~getPlayers~. Note that you may have to restructure your previous game(s) if you want it/them to fulfill the requirements of your new typeclass.
+
+** PlayerSet
+A ~PlayerSet~ typeclass may look like this. 
+
+#+BEGIN_SRC <haskell>
+class PlayerSet s where
+  players :: s a -> [a]
+#+END_SRC
+
+Some instances could be ~PlayerList~, ~PlayerTuple~ and ~SinglePlayer~, that you must define before you can define the instances.
+
+* Functors
+Try to make some instances of the ~Functor~ typeclass. Here are some suggestions:
+
+- ~MyMaybe~, where you make your own implementation of ~Maybe~ and then make it an instance of ~Functor~.
+- ~Tree~, following the example in book, both for making the tree and making it an instance of ~Functor~.
+- ~Box~, a dummy type that simply holds a single value of "unknown" type.
+- ~PlayerList~, ~PlayerTuple~ or ~SinglePlayer~ from the previous exercise.
+
+Now use ~fmap~ with a function that changes the type of what you implemented. For example, if you have ~MyMaybe True~, that has type ~MyMaybe Bool~, use ~fmap~ with a function so it changes its type into ~MyMaybe Char~.
+
+
 
 

@@ -214,3 +214,4 @@ Here are two more suggestions for sorting algorithms to try and make. There are 
   - Rather than ~take~ and ~drop~, you could have made your own function ~mysplit~ that given a list, returns a tuple with the two halves of the list.
 - Insertionsort. (Hint: What we do in general is, we have an unsorted list and a sorted list (initially empty), and one step at a time we take an element from the unsorted list and *inserts* it into the sorted list. So actually, we need to supply the sorted list as an input alongside the unsorted part. We probably need a helper function as well that inserts an element into a sorted list. Note that there are better methods of doing insertionsort, but this is for practicing the thinking.)
 
+

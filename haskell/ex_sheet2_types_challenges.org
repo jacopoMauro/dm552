@@ -101,6 +101,6 @@ Implement the following.
 - ~insertAt~, inserts an element at the i'th position.
 - ~range~, makes a list of the numbers from i to j (increasing).
 - ~tuples~, makes a list of all pairs of elements in a given list, where an element can be paired with itself, e.g. ~tuples ['t','f']~ is ~[('t','t'), ('t','f'), ('f','t'), ('f','f')]~ or a permutation hereof.
-- ~pairs~, makes a list of all pairs of elements in a given list, where an elements *cannot* be paired with itself, e.g. ~pairs [1,2]~ is ~[(1,2),(2,1)]~ or a permutation hereof.
+- ~pairs~, makes a list of all pairs of elements in a given list, where an element *cannot* be paired with itself, e.g. ~pairs [1,2]~ is ~[(1,2),(2,1)]~ or a permutation hereof.
   - ~combinations~, make a generalization of ~pairs~, that creates lists instead of tuples and takes a k which is the number of elements chosen from the given list. E.g. the first few elements of ~combinations 3 ['a'..'d']~ is ~[['a','b','c'],['a','b','d'],['a','c','b'],...]~
 

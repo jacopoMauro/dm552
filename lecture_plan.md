@@ -19,6 +19,10 @@
 1. [19.03] Expressions, Commands, Tail recursion, Passing by value and reference (Chapter 6, 7, PL).
    Homeworks: exercises chapter 6.1, 6.5, 6.6
 1. [20.03] Type constructors, Functors, basics of IO (Chapter 7, Chapter 8, LYH).
+1. [26.03] Parameter passing, Deep and Shallow Binding, Higher order (Chapter 7, PL).
+	 Homeworks: chapter 7 exercises 1-5, chapter 6 exercise 7, chapter 5 exercise 7,
+	 chapter 4 exercises 6-13 
+	
 
 
 

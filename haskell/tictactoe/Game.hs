@@ -1,8 +1,10 @@
 module Game
-  ( initGame
+  ( Game
+  , initGame
   , place
   , move
   , isEnd
+  , nextAction
   ) where
 
 import Data.Array
@@ -67,7 +69,7 @@ move g@(Game b p s ) fromIx toIx
         True
       else if any (not.(flip elem) [1..3]) [fst fromIx, snd fromIx, fst toIx, snd toIx] then
         True
-      else if pieceAt b fromIx /= pp && pieceAt b toIx /= None then
+      else if pieceAt b fromIx /= pp || pieceAt b toIx /= None then
         True
       else
         False
@@ -81,6 +83,16 @@ win p b = winrow || wincol || windiag
     winrow = any (snd) [(row, val) | row <- [1..3], let val = all (\col -> (arr b)!(row,col) == pp) [1..3]]
     wincol = any (snd) [(col, val) | col <- [1..3], let val = all (\row -> (arr b)!(row,col) == pp) [1..3]]
     windiag = all (\x -> (arr b)!(x,x) == pp) [1..3] || all (\ix -> (arr b)!ix == pp) [(3,1),(2,2),(1,3)]
+
+
+
+nextAction :: Game -> String -> Game
+nextAction g@(Game _ _ Place) s = place g (read s::(Int,Int))
+nextAction g@(Game _ _ Move) s = move g from to
+  where
+    ss = words s
+    from = read $ ss !! 0 :: (Int,Int)
+    to = read $ ss !! 1 :: (Int,Int)
 
 instance Show Game where
   show (Game b _ _) = show b

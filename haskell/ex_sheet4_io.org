@@ -28,3 +28,72 @@
 - Write a program that counts the number of lines read from stdin
 - Write a program that transforms text from stdin to upper case.
 
+
+* Scoreboard
+
+Make a program that calculates the scores of some players in the following way. Input is given in a file, starting with a line stating which players were playing, each represented as an uppercase letter. The next line shows, the order in which players gained or lost points as a string, where an uppercase letter means the corresponding player gained a point and a lowercase letter means that player lost a point.
+
+As an example two players ~A~ and ~B~ played a short game:
+
+#+BEGIN_SRC <>
+AB
+AABaB
+#+END_SRC
+
+First ~A~ won two rounds, then ~B~ won, then ~A~ lost, and finally ~B~ won again. The final result is ~A~ has a score of ~1~ and ~B~ a score of ~2~.
+
+You should write the result to a new file, in a reasonable way. For example each player on its own line:
+
+#+BEGIN_SRC <>
+A: 1
+B: 2
+#+END_SRC
+
+But initially you should probably just print/show the object, as I prefer you thinking about how to solve the problem, rather than details of how to present it in a pretty way.
+
+Hint: Start with a simple solution that works according to some (or a lot) assumptions, and later refactor your solution to be better.
+
+Hint: You might find that ~Data.Map.Strict~ supplies a helpful data structures and helper functions.
+
+*MORE EXAMPLES*
+
+Input:
+#+BEGIN_SRC <>
+ABC
+ABCABCbaa
+#+END_SRC
+
+Output:
+#+BEGIN_SRC <>
+A: 0
+B: 1
+C: 2
+#+END_SRC
+
+
+Input:
+#+BEGIN_SRC <>
+quickfox
+QFOqUQFIIOoxXCckxxoQ
+#+END_SRC
+
+Output:
+#+BEGIN_SRC <>
+C: 0
+F: 2
+I: 2
+K: -1
+O: 0
+Q: 2
+U: 1
+X: -2
+#+END_SRC
+
+** Some improvements
+After you made your first version, improve it, so it works from fewer assumptions. This may be fast if you made a great solution initially.
+
+Things you may consider improving:
+- If you assumed the players came in ordered like ~['A'..]~, you could change it so it works for any order of players, such as ~"BXM"~, or even ~"bXm"~.
+- Improve the printing of the result, so it shows as in the example.
+
+

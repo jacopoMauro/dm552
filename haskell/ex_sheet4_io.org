@@ -53,7 +53,7 @@ But initially you should probably just print/show the object, as I prefer you th
 
 Hint: Start with a simple solution that works according to some (or a lot) assumptions, and later refactor your solution to be better.
 
-Hint: You might find that ~Data.Map.Strict~ supplies a helpful data structures and helper functions.
+Hint: You might find that ~Data.Map.Strict~ supplies a helpful data structure and helper functions.
 
 *MORE EXAMPLES*
 
@@ -94,15 +94,13 @@ After you made your first version, improve it, so it works from fewer assumption
 
 Things you may consider improving:
 - If you assumed the players came in ordered like ~['A'..]~, you could change it so it works for any order of players, such as ~"BXM"~, or even ~"bXm"~.
-- Improve the printing of the result, so it shows as in the example.
+- Improve the printing of the result, so it shows more like the example.
 
 
 * Lazy IO
 Make two programs, one that gets the contents of a file, and prints the first character, and another one that prints the last character of that file.
 
-Use some kind of time tool, see the difference when running the programs on a large file, such as the ~lipsum.txt~ file uploaded here.
-
-
+Use some kind of time tool, and see the difference in time when running the programs on a large file, such as the ~lipsum.txt~ file uploaded here.
 
 
 * Another game: Nim
@@ -117,5 +115,6 @@ Ideas for additions to the game:
 - The program actually terminates when the game is finished (number of items == 0), with a small message.
 - As mentioned, the number of items and the range is decided by input at the beginning of the program.
 - Make it so there are multiple piles each with their own number of items, so the player first chooses which pile to draw from, then the number of items to draw.
-
+- Make a datastructure for the game, and make it a custom instantiation of the ~Show~ typeclass. Use this to show the game, rather than simply the number of items left in the pile.
+- Make it part of the ~Game~ typeclass, from the typeclass exercise from sheet 3, if you made it.
 

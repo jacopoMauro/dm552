@@ -2,7 +2,7 @@ In this folder you can find additional material related to Haskell.
 
 #### How-far-did-you-get-poll
 
-Click [HERE](https://forms.office.com/Pages/ResponsePage.aspx?id=fcKXmj64lEazU1S9vxirW2eG02KmIadBoEs1b65abe1UMklUU1VERUJDVlZaTjM1UFdDVk1JWVZTWC4u) to answer how far you got.
+Click [HERE](https://forms.office.com/Pages/ResponsePage.aspx?id=fcKXmj64lEazU1S9vxirW2eG02KmIadBoEs1b65abe1URFU5RkNYTTk5RFdJRU1QUU1BNkMxQkZXTy4u) to answer how far you got.
 
 [//]: # (https://www.strawpoll.me/17607885)
 [//]: # (https://www.strawpoll.me/17588270) 

@@ -97,3 +97,25 @@ Things you may consider improving:
 - Improve the printing of the result, so it shows as in the example.
 
 
+* Lazy IO
+Make two programs, one that gets the contents of a file, and prints the first character, and another one that prints the last character of that file.
+
+Use some kind of time tool, see the difference when running the programs on a large file, such as the ~lipsum.txt~ file uploaded here.
+
+
+
+
+* Another game: Nim
+The game Nim exists in many variants, usually between two players. One of the simple variants is played with a pile of items, say, 15, and each round the current player must take a number of items in some range, say, 1-4 items. The goal is to not take the last item, so the range does not include 0.
+
+You should implement this game, you can decide on the rules to play by, or let them be decided at the beginning of the game. The program should write the number of items left after each player has had their turn.
+
+To save some time, you don't need to think about which players turn it is, the people playing it can keep track of that themselves.
+
+** Improvements
+Ideas for additions to the game:
+- The program actually terminates when the game is finished (number of items == 0), with a small message.
+- As mentioned, the number of items and the range is decided by input at the beginning of the program.
+- Make it so there are multiple piles each with their own number of items, so the player first chooses which pile to draw from, then the number of items to draw.
+
+

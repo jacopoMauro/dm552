@@ -23,6 +23,8 @@
 	 Homeworks: chapter 7 exercises 1-5, chapter 6 exercise 7, chapter 5 exercise 7,
 	 chapter 4 exercises 6-13
 1. [27.03] Input and Output (basics and functions), files (Chapter 8, beginning of 9, LYH)
+1. [02.04] Exceptions, Finally, Types until scalar types (Chapter 7, Chapter 8, PL)
+   Homeworks: chapter 7 exercises 6-9
 	
 
 

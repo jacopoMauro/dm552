@@ -25,6 +25,8 @@
 1. [27.03] Input and Output (basics and functions), files (Chapter 8, beginning of 9, LYH)
 1. [02.04] Exceptions, Finally, Types until scalar types (Chapter 7, Chapter 8, PL)
    Homeworks: chapter 7 exercises 6-9
+1. [03.04] Files, bracket, command line arguments, IO and (->) r Functor, Functor laws
+   (Chapter 9, Chapter 10, LYH)
 	
 
 

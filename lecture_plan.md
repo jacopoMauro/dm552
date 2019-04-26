@@ -29,6 +29,7 @@
    (Chapter 9, Chapter 10, LYH)
 1. [24.04] Applicative, Monads, do notation and bind (Chapter 11, Chapter 13, LYH)
 1. [25.04] Monad laws, State Monad (Chapter 13, Chapter 14 LYH)
+1. [26.04] Composite Type, Type Equivalence, Compatibility and Conversion (Chapter 8, PL)
 	
 
 

@@ -30,9 +30,9 @@
 1. [24.04] Applicative, Monads, do notation and bind (Chapter 11, Chapter 13, LYH)
 1. [25.04] Monad laws, State Monad (Chapter 13, Chapter 14 LYH)
 1. [26.04] Composite Type, Type Equivalence, Compatibility and Conversion (Chapter 8, PL)
+1. [29.04] Type Inference, Unification, Type Safety, Garbage collector (Chapter 8, Chapter 12.3.4, PL)
+   Homeworks: Chapter 8, exercises 1,3-6,8-12
 	
-
-
 
 # Topics tackled during the Haskell exercise sessions
 For each session the parentheses show what the end-goal of that session is. If you are behind that goal, you should practice at home! The curly braces show the corresponding chapters in LYH (pdf).

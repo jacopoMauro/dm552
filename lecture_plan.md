@@ -32,6 +32,7 @@
 1. [26.04] Composite Type, Type Equivalence, Compatibility and Conversion (Chapter 8, PL)
 1. [29.04] Type Inference, Unification, Type Safety, Garbage collector (Chapter 8, Chapter 12.3.4, PL)
    Homeworks: Chapter 8, exercises 1,3-6,8-12
+1. [30.04] join, liftM, filterM, foldM, Monoids (Chapter 14, Chapter 12, LYH)
 	
 
 # Topics tackled during the Haskell exercise sessions

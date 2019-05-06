@@ -118,3 +118,60 @@ Ideas for additions to the game:
 - Make a datastructure for the game, and make it a custom instantiation of the ~Show~ typeclass. Use this to show the game, rather than simply the number of items left in the pile.
 - Make it part of the ~Game~ typeclass, from the typeclass exercise from sheet 3, if you made it.
 
+
+* Working towards monads
+It is important you understand types, typeclasses and functors to a certain degree before tackling monads, so here are some more exercises on that.
+
+** Types and typeclasses
+If you haven't already, read and follow along the section "A yes-no typeclass" in chapter 7. Feel free to make your own type and make it an instance as well.
+
+Also make sure you've done exercise 5 on sheet 3.
+
+Make a ~Describable~ typeclass. Instances must implement a function ~describe~ that takes something describable and returns a tuple of the description and the thing, ~(String, a)~. Make some types instances of ~Describable~, e.g. ~Bool~, ~Char~, some custom type.
+
+#+BEGIN_SRC <haskell>
+ghci> describe True
+("One of my favorite booleans: True",True)
+ghci> describe 'Y'
+("This one has character: 'Y'",'Y')
+#+END_SRC
+
+** Functors
+Again, make sure you've made exercises 6 on sheet 3, which includes following the example from "The Functor typeclass" in chapter 7.
+
+Remember, we only have to implement ~fmap~ for a type to become members of the ~Functor~ typeclass. If we think of functors as boxes that hold some value, then ~fmap~ takes a function that transforms the held value and creates a new box with the new value inside.
+
+Make a type ~Described a~ that holds any type, but has a description (~String~) as well. You can use record syntax to define it and/or make extra functions to retrieve or change the description.
+
+Make ~Described~ an instance of the ~Functor~ typeclass, by making ~fmap~ function on the value, and not changing the description.
+
+Consider, how you would take any simple value and make it into a ~Described~ (if you are not given a description). Also consider how you would handle the case where you have a function in a described, along with a value in a described and you would like to apply the function to the value and keep the result in a described. In "pseudo" Haskell:
+
+#+BEGIN_SRC <haskell>
+(Described (+3) "Plus three") `apply` (Described 39 "A good number") = (Described 42 ?)
+#+END_SRC
+
+Once you have decided how you want to handle that, you can make your ~Described~ into an ~Applicative~ functor.
+
+
+* Monads
+Monads are much like applicative functors, but they also start to make a lot more sense, in my opinion.
+
+Make sure you've read and followed along the example in "Walk the line" in chapter 11 which shows one way to utilize the ~Maybe~ monad. Also make sure to try to "desugar" the do notation in the examples throughout the "do notation" section.
+
+In Java you can make objects representing computations that might finish in the future, and sometimes you'd like to make more computations on whatever the result may be. You can encapsulate the new result in a new future, to further postpone the computations. This is actually usually the case in Haskell because it is lazy, but we continue with the example anyways. 
+
+In the following example try to make ~Future~ an instance of ~Monad~.
+
+#+BEGIN_SRC <haskell>
+data Future a = Future a deriving Show
+
+instance Functor Future where
+  fmap f (Future x) = Future (f x)
+
+instance Applicative Future where
+  pure x = Future x
+  (Future f) <*> (Future x) = Future (f x)
+#+END_SRC
+
+

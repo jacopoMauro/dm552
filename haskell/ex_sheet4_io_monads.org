@@ -174,4 +174,12 @@ instance Applicative Future where
   (Future f) <*> (Future x) = Future (f x)
 #+END_SRC
 
+Once you've made ~Future~ into a monad, try "desugaring" ~foo (Future 21)~, where ~foo~ is defined as:
+
+#+BEGIN_SRC <haskell>
+foo :: (Num a) => Future a -> Future a
+foo m = do
+  x <- m
+  return (x*2)
+#+END_SRC
 

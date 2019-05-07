@@ -34,6 +34,8 @@
    Homeworks: Chapter 8, exercises 1,3-6,8-12
 1. [30.04] join, liftM, filterM, foldM, Monoids (Chapter 14, Chapter 12, LYH)
 1. [01.05] Abstract Data Types, Encaplusation, Subtype, Inheritance (Chapter 9, Chapter 10, PL)
+1. [07.05] Abstract Classes, Interfaces, Multiple Inheritance, Dynamic Lookup, 
+   Generics, Covariance and Contravariance, Object Implementation (Chapter 10, PL)
 	
 
 # Topics tackled during the Haskell exercise sessions

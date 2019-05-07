@@ -155,13 +155,15 @@ Once you have decided how you want to handle that, you can make your ~Described~
 
 
 * Monads
+Note that LYH says that you do not need to make your type an instance of ~Applicative~ to make an instance of ~Monad~, but THIS IS NOT TRUE in recent versions of GHC this is a requirement.
+
 Monads are much like applicative functors, but they also start to make a lot more sense, in my opinion.
 
 Make sure you've read and followed along the example in "Walk the line" in chapter 11 which shows one way to utilize the ~Maybe~ monad. Also make sure to try to "desugar" the do notation in the examples throughout the "do notation" section.
 
 In Java you can make objects representing computations that might finish in the future, and sometimes you'd like to make more computations on whatever the result may be. You can encapsulate the new result in a new future, to further postpone the computations. This is actually usually the case in Haskell because it is lazy, but we continue with the example anyways. 
 
-In the following example try to make ~Future~ an instance of ~Monad~.
+In the following example try to make ~Future~ an instance of ~Monad~. For ~>>=~ it should just unwrap the value inside the ~Future~ and apply the function to it.
 
 #+BEGIN_SRC <haskell>
 data Future a = Future a deriving Show

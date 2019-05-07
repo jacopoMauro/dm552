@@ -43,6 +43,7 @@ If you are at Uni and need my help you may be able to find me at the TA office "
 * [Hoogle: Search Haskell APIs by type!](https://www.haskell.org/hoogle/)
 * [Haskell Hierarchical Libraries](http://www.cis.upenn.edu/~bcpierce/courses/advprog/resources/index.html)
 * [Tour of Haskell syntax](http://www.cse.chalmers.se/edu/year/2015/course/TDA452_Functional_Programming/haskell-syntax.html)
+* [Desugar Haskell code](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html)
 
 #### Text Books
 

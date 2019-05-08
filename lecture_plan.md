@@ -36,6 +36,8 @@
 1. [01.05] Abstract Data Types, Encaplusation, Subtype, Inheritance (Chapter 9, Chapter 10, PL)
 1. [07.05] Abstract Classes, Interfaces, Multiple Inheritance, Dynamic Lookup, 
    Generics, Covariance and Contravariance, Object Implementation (Chapter 10, PL)
+1. [08.05] Object Implementation, Fragile Class, Delegation, Constraint Programming Intro (Chapter 10, PL)
+   Homeworks: chapter 10 exercises 2-4 
 	
 
 # Topics tackled during the Haskell exercise sessions

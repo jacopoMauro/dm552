@@ -301,3 +301,9 @@ Remind yourself of what monoids are.
 - What is the binary function of the ~All~ monoid? What is the identity?
 - ~foldMap~ takes a monoid constructor and a ~Foldable~ (such as a list), and maps the constructor on the values, while folding with ~mappend~.
   - What is the value of ~getAll $ foldMap All [True, False, True]~?
+
+This is the implementation of ~foldMap~:
+#+BEGIN_SRC <haskell>
+foldMap :: Monoid m => (a -> m) -> t a -> m
+    foldMap f = foldr (mappend . f) mempty
+#+END_SRC

@@ -222,7 +222,7 @@ foo = "abc" >>= \c -> [toUpper c, toLower c]
 bar :: [Int] -> [Int]
 bar xs = do
   x <- xs
-  [1,2]
+  [1,2]           -- Equivalent to _ <- [1,2]
   return x
 #+END_SRC
 

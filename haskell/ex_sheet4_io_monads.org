@@ -185,3 +185,119 @@ foo m = do
   return (x*2)
 #+END_SRC
 
+* The list monad
+For this exercise assume the following is the definition of ~Monad~ (as shown in LYH), along with the instance for lists:
+
+#+BEGIN_SRC <haskell>
+class Monad m where  
+    return :: a -> m a
+
+    (>>=) :: m a -> (a -> m b) -> m b
+
+    (>>) :: m a -> m b -> m b
+    x >> y = x >>= \_ -> y
+
+    fail :: String -> m a  
+    fail msg = error msg
+
+instance Monad [] where
+    return x = [x]
+    xs >>= f = concat (map f xs)
+    fail _ = []
+#+END_SRC
+
+You shouldn't add this to a file, but think of it as the implementation.
+
+- Desugar the value of ~foo~:
+
+#+BEGIN_SRC <haskell>
+import Data.Char
+
+foo = "abc" >>= \c -> [toUpper c, toLower c]
+#+END_SRC
+
+- Desugar the value of ~bar [3,4,5]~ where
+
+#+BEGIN_SRC <haskell>
+bar :: [Int] -> [Int]
+bar xs = do
+  x <- xs
+  [1,2]
+  return x
+#+END_SRC
+
+- Write a function that uses ~do~-notation to double the value of all numbers in a list.
+
+- Write a function that uses ~do~-notation to make gibberish from a string. The gibberish should come from repeating each letter with an 'o' in between, e.g. the string "b" becomes "bob" and the string "bat" becomes "bobaoatot".
+  - Feel free to change the letter inserted in between or making sure only consonants are repeated.
+
+
+* The State Monad
+As with the last exercise we have the following assumption:
+
+#+BEGIN_SRC <haskell>
+class Monad m where  
+    return :: a -> m a
+
+    (>>=) :: m a -> (a -> m b) -> m b
+
+    (>>) :: m a -> m b -> m b
+    x >> y = x >>= \_ -> y
+
+    fail :: String -> m a  
+    fail msg = error msg
+
+newtype State s a = State { runState :: s -> (a,s) }
+
+instance Monad (State s) where
+    return x = State $ \s -> (x,s)
+    (State h) >>= f = State $ \s -> let (a, newState) = h s
+                                        (State g) = f a
+                                    in  g newState
+#+END_SRC
+
+Following the example of a stack from LYH, modified to use the function ~state~ in ~pop~ and ~push~ instead of the constructor ~State~, just imagine they do the same.
+
+
+#+BEGIN_SRC <haskell>
+import Control.Monad.Trans.State
+
+type Stack = [Int]
+
+pop :: State Stack Int
+pop = state $ \(x:xs) -> (x,xs)
+
+push :: Int -> State Stack ()
+push a = state $ \xs -> ((),a:xs)
+
+stackManip :: State Stack Int
+stackManip = do
+    push 3
+    a <- pop
+    pop
+#+END_SRC
+
+- What is the type of ~runState pop~? ~runState (push 42)~? ~runState stackManip~?
+
+- Desugar ~runState pop [42,41]~
+
+- Desugar ~runState (push 42) []~
+
+- Desugar ~runState stackManip [1,2]~
+
+- Write a function that swaps the two top elements of a stack.
+
+- Write a function that returns the third item from the top, but leaves the rest of the stack unchanged.
+
+
+* Monad laws
+- What are the monad laws?
+- Check that the laws hold for the ~Maybe~ and list monads.
+
+* Monoids
+Remind yourself of what monoids are.
+- What is the binary function of the ~Sum~ monoid (found in ~Data.Monoid~)? What is the identity?
+  - Desugar ~getSum $ (Sum 13 `mappend` Sum 29)~. What is the result?
+- What is the binary function of the ~All~ monoid? What is the identity?
+- ~foldMap~ takes a monoid constructor and a ~Foldable~ (such as a list), and maps the constructor on the values, while folding with ~mappend~.
+  - What is the value of ~getAll $ foldMap All [True, False, True]~?

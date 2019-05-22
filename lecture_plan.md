@@ -39,7 +39,7 @@
 1. [08.05] Object Implementation, Fragile Class, Delegation, Constraint Programming Intro (Chapter 10, PL)
    Homeworks: chapter 10 exercises 2-4 
 1. [13.05] Constraint Programmings (Slides + Material on the git repository)
-1. [21.05] Simulation of the peergrade exam
+1. [21.05] Simulation of the peer feedback part of the exam
 1. [22.05] Martin Presentation, Questions and Answers on exam	
 
 # Topics tackled during the Haskell exercise sessions

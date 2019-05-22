@@ -38,7 +38,9 @@
    Generics, Covariance and Contravariance, Object Implementation (Chapter 10, PL)
 1. [08.05] Object Implementation, Fragile Class, Delegation, Constraint Programming Intro (Chapter 10, PL)
    Homeworks: chapter 10 exercises 2-4 
-1. [13.05] Constraint Programmings (Slides + Material on the git repository)	
+1. [13.05] Constraint Programmings (Slides + Material on the git repository)
+1. [21.05] Simulation of the peergrade exam
+1. [22.05] Martin Presentation, Questions and Answers on exam	
 
 # Topics tackled during the Haskell exercise sessions
 For each session the parentheses show what the end-goal of that session is. If you are behind that goal, you should practice at home! The curly braces show the corresponding chapters in LYH (pdf).

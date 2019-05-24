@@ -46,10 +46,12 @@
 For each session the parentheses show what the end-goal of that session is. If you are behind that goal, you should practice at home! The curly braces show the corresponding chapters in LYH (pdf).
 
 1. [11.02] GHCi install, basics, function calls, basic lists. (Sheet 1, up until exercise 2.1.6.3 (included)) {Chapter 1}
-1. [18.02] Ranges and infinite lists, pattern matching, simple recursion, tuples (The rest of sheet 1, exercise 2.1.6.4 through exercise 2.4.2, challenges are optional) {Chapters 1 & 3 (& 4)}
-1. [25.02] Quicksort, mergesort, types, more recursion (Sheet 2, up until exercise 3 (included), optionally challenges sheet 1) {Chapters 2 & 3 (& 4)}
-1. [04.03] More types, challenges, beginning higher order functions (The rest of sheet 2, sheet 3 first exercise) {Chapters 2 & 5}
-1. [11.03] More higher order functions, modules, beginning of custom types (Sheet 3, up until exercise 3 (included)) {Chapters 5, 6 & 7}
-1. [18.03] We covered exercises from theory on static vs. dynamic scoping, and activation records {**PL** chapter 4 & 5}
+1. [18.02] Ranges and infinite lists, pattern matching, simple recursion, tuples. (The rest of sheet 1, exercise 2.1.6.4 through exercise 2.4.2, challenges are optional) {Chapters 1 & 3 (& 4)}
+1. [25.02] Quicksort, mergesort, types, more recursion. (Sheet 2, up until exercise 3 (included), optionally challenges sheet 1) {Chapters 2 & 3 (& 4)}
+1. [04.03] More types, challenges, beginning higher order functions. (The rest of sheet 2, sheet 3 first exercise) {Chapters 2 & 5}
+1. [11.03] More higher order functions, modules, beginning of custom types. (Sheet 3, up until exercise 3 (included)) {Chapters 5, 6 & 7}
+1. [18.03] We covered exercises from theory on static vs. dynamic scoping, and activation records. {**PL** chapter 4 & 5}
 1. [25.03] We covered some exercises from sheet 3, exercise 1.3, 2.1 and 3.2.1. **At home you should finish sheet 3** (you don't have to do all of exercise 4). {Chapters 5,6 & 7}
 1. [01.04] We coded a simple version of tic-tac-toe live in class, the files have been commented and put in the tictactoe folder on GitHub alongside a full implementation. Next class is after Easter, so please spend some time really trying to get comfortable with all the material so far. (Everything up to sheet 4, exercise 3 (included)) {Chapters 7 & (beginning of) 8}
+1. [06.05] We revisited typeclasses and functors, working towards some exercises on monads. (Exercise 5 and 6, sheet 4) {Chapters 7, 10 & 11}
+1. [14.05] We primarily looked at monads. Also a little bit monoids. (Exercises 7-10, sheet 4) {Chapters 10, 11 & 12}

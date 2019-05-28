@@ -277,7 +277,10 @@ stackManip = do
     pop
 #+END_SRC
 
-- What is the type of ~runState pop~? ~runState (push 42)~? ~runState stackManip~?
+- What is the type of:
+  - ~runState pop~
+  - ~runState (push 42)~
+  - ~runState stackManip~
 
 - Desugar ~runState pop [42,41]~
 

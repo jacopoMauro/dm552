@@ -40,7 +40,10 @@
    Homeworks: chapter 10 exercises 2-4 
 1. [13.05] Constraint Programmings (Slides + Material on the git repository)
 1. [21.05] Simulation of the peer feedback part of the exam
-1. [22.05] Martin Presentation, Questions and Answers on exam	
+1. [22.05] Martin Presentation, Questions and Answers on exam
+1. [27.05] Questions and Answers on exam
+1. [29.05] Questions and Answers
+
 
 # Topics tackled during the Haskell exercise sessions
 For each session the parentheses show what the end-goal of that session is. If you are behind that goal, you should practice at home! The curly braces show the corresponding chapters in LYH (pdf).
@@ -55,3 +58,4 @@ For each session the parentheses show what the end-goal of that session is. If y
 1. [01.04] We coded a simple version of tic-tac-toe live in class, the files have been commented and put in the tictactoe folder on GitHub alongside a full implementation. Next class is after Easter, so please spend some time really trying to get comfortable with all the material so far. (Everything up to sheet 4, exercise 3 (included)) {Chapters 7 & (beginning of) 8}
 1. [06.05] We revisited typeclasses and functors, working towards some exercises on monads. (Exercise 5 and 6, sheet 4) {Chapters 7, 10 & 11}
 1. [14.05] We primarily looked at monads. Also a little bit monoids. (Exercises 7-10, sheet 4) {Chapters 10, 11 & 12}
+1. [28.05] Questions and Answers

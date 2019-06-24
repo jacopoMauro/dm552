@@ -27,7 +27,7 @@ familiar with the functional programming paradigm.
 
 Contact email: mauro@sdu.dk
 
-Office Ø13-604a-2
+Office [Ø13-604a-2](https://clients.mapsindoors.com/sdu/573f26e4bc1f571b08094312/details/563cb9aa423b7d0540c9a90a)
 
 ## Teaching Assistant
 

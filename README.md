@@ -31,9 +31,8 @@ Office [Ø13-604a-2](https://clients.mapsindoors.com/sdu/573f26e4bc1f571b0809431
 
 ## Teaching Assistant
 
-Jonas Bamse Andersen
-
-Contact email: jonan15@student.sdu.dk
+* Jonas Bamse Andersen (jonan15@student.sdu.dk)
+* Henrik Sejer Pedersen (henpe15@student.sdu.dk)
 
 ## Course Material
 

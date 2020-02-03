@@ -44,6 +44,15 @@ The additional course material is available on this git repository.
 Material that can not be made public will be available on the
 [Blackboard platform](https://e-learn.sdu.dk/).
 
+
+Additional interesting books to know a bit more on Haskell (optional): 
+
+* Bird, Richard and Wadler, Philip (1988). Introduction to Functional Programming (1st ed.). Prentice Hall Press. ISBN 0-13-484189-1.
+* Bird, Richard (1998). Introduction to Functional Programming using Haskell (2nd ed.). Prentice Hall Press. ISBN 0-13-484346-0.
+* Hutton, Graham (2007). Programming in Haskell. Cambridge University Press. ISBN 978-0-52169-269-4.
+* Thompson, Simon (1999). Haskell - The Craft of Functional Programming (2nd ed.). Addison-Wesley. ISBN 0-201-34275-8.
+* Marlow, Simon (2013). Parallel and Concurrent Programming in Haskell. O’Reilly. ISBN 1-4493-3594-2.
+
 ## Exam
 
 To complete the course the student has to pass a written exam having questions

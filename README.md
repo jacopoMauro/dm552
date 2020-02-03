@@ -53,6 +53,13 @@ Additional interesting books to know a bit more on Haskell (optional):
 * Thompson, Simon (1999). Haskell - The Craft of Functional Programming (2nd ed.). Addison-Wesley. ISBN 0-201-34275-8.
 * Marlow, Simon (2013). Parallel and Concurrent Programming in Haskell. O’Reilly. ISBN 1-4493-3594-2.
 
+#### Online Haskell Resources
+
+* [Hoogle: Search Haskell APIs by type!](https://www.haskell.org/hoogle/)
+* [Haskell Hierarchical Libraries](http://www.cis.upenn.edu/~bcpierce/courses/advprog/resources/index.html)
+* [Tour of Haskell syntax](http://www.cse.chalmers.se/edu/year/2015/course/TDA452_Functional_Programming/haskell-syntax.html)
+* [Desugar Haskell code](http://www.haskellforall.com/2014/10/how-to-desugar-haskell-code.html)
+
 ## Exam
 
 To complete the course the student has to pass a written exam having questions

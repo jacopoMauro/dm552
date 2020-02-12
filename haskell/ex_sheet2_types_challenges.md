@@ -61,7 +61,7 @@ include `:t`).
     the list where the element at the index is set to the given element.
 -   `modIdx`, takes a list, a function and a number (index), and returns
     the list where the element at the index is modified with the given
-    function. It has the type signature `modIdx :: [a] -> (a -> a) -> [a]`.
+    function. It should have a type signature similar to `modIdx :: (a -> a) -> Int -> [a] -> [a]`.
 -   `unique`, takes a list and returns a list of the unique elements in
     the list. This can be seen as removing duplicates.
 

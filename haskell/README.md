@@ -4,6 +4,8 @@ In this folder you can find additional material related to Haskell.
 
 A pdf of the book \[LYH\] can be found at [https://github.com/clojurians-org/haskell-ebook/blob/master/Learn%20You%20a%20Haskell%20for%20Great%20Good!%20A%20Beginner's%20Guide.pdf](https://github.com/clojurians-org/haskell-ebook/blob/master/Learn%20You%20a%20Haskell%20for%20Great%20Good!%20A%20Beginner's%20Guide.pdf)
 
+Note that we refer to the chapters in the pdf, which is 1 smaller than the browser version, e.g. chapter 1 in the pdf is chapter 2 in the browser version.
+
 #### Install
 
 To install Haskell locally please have a look at the [Haskell Platform](https://www.haskell.org/platform/).
@@ -11,7 +13,7 @@ It is possible also to use the container technology Docker, for more information
 
 #### Exercises
 
-You can look at the exercises directly in GitHub, by clicking e.g. [ex_sheet1_lists_funcs_patterns.org](ex_sheet1_lists_funcs_patterns.org) (soon) or download the pdf. Some formatting and a few mathematical formulas may show nicer in the pdf.
+You can look at the exercises directly in GitHub, by clicking e.g. [ex_sheet1_lists_funcs_patterns.md](ex_sheet1_lists_funcs_patterns.md) or download the pdf. Some formatting may show nicer in the pdf.
 
 #### Find us
 

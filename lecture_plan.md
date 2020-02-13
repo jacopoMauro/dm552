@@ -6,3 +6,8 @@
 1. [10.02] Abstract machines, interpreter, compiler, partial evaluation, syntax and semantics (Chapters 1,2 PL)
 1. [12.02] Where, let, case of, beginning of higher order functions (Chapters 3,4,5 LYH)
 
+# Exercise sessions
+
+1. [10.02] Install, basics, functions, pattern matching, lists & list comprehensions; Sheet 1 up until 2.3 "Lists, revisited (list comprehensions)" (included). {Chapter 1, 3 and 4 LYH}
+1. [17.02] Tuples, mergesort + insertionsort, types, let & where, more functions; Rest of sheet 1, sheet 2 up until 4 "Make the function" (included). {Chapter 1, 2, 3 and 4 LYH}
+

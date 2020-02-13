@@ -34,12 +34,52 @@ constraint, and instead see the type `t a` as `[a]`. Make your guess first, then
 -   `cycle`
 -   `succ`
 
+Let and where
+=============
+
+For some functions it is highly advantageous to use `let..in` or `where`. 
+
+E.g.
+```haskell
+maximum :: Ord a -> [a] -> a
+maximum [x] = x
+maximum (x:xs)
+    | x < y     = y
+    | otherwise = x
+    where
+        y = maximum xs
+```
+
+Or equivalently, with `let..in`
+
+```haskell
+maximum :: Ord a -> [a] -> a
+maximum [x]    = x
+maximum (x:xs) = 
+    let
+        y = maximum xs
+    in case (x < y) of
+        True  -> y
+        False -> x
+```
+Note that in the `where` example, we use `guards` to do the `x<y` check, while in `let..in` we ended up using `case..of`. However, both `where` and `let..in` can, and often should, be used regardless of the need for different cases.
+
+To familiarize yourself with `let..in` and `where` make a function that calculates the roots of a quadratic equation (andengradsligning), i.e. given the coefficients a, b and c, calculate the roots x1 and x2 (assume there are two, and let the answer be given as a tuple). The function should have a signature similar to `roots :: Floating t => t -> t -> t -> (t,t)`.
+
+Two examples of this could be:
+```haskell
+> roots 2 5 3
+(-1.0,-1.5)
+> roots 2 2 (-4)
+(1.0,-2.0)
+```
+
+-   Implement the function twice, once with `let..in` and once with `where`. You should as a minimum calculate the discriminant in your `let` or `where` part.
+
 Make the function
 =================
 
-Write the type for the following functions, then implement them. You are
-welcome to use functions you have seen or made previously (this does not
-include `:t`).
+For the following functions, write the type for the ones thatt are missing it, and implement all of them. You are welcome to use functions you have seen or made previously (this does not include `:t`).
 
 -   `second`, takes a list and returns the second element.
 -   `secondLast`, takes a list and returns the second to last element,
@@ -61,7 +101,7 @@ include `:t`).
     the list where the element at the index is set to the given element.
 -   `modIdx`, takes a list, a function and a number (index), and returns
     the list where the element at the index is modified with the given
-    function. It should have a type signature similar to `modIdx :: (a -> a) -> Int -> [a] -> [a]`.
+    function. It should have a type signature similar to `modIdx :: [a] -> (a -> a) -> Int -> [a]`.
 -   `unique`, takes a list and returns a list of the unique elements in
     the list. This can be seen as removing duplicates.
 

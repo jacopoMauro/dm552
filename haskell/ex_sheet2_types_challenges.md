@@ -81,7 +81,7 @@ Two examples of this could be:
 (1.0,-2.0)
 ```
 
--   Implement the function roots, once with `let..in` and once with `where`. You should as a minimum calculate the discriminant in your `let` or `where` part.
+-   Implement the function `roots`, once with `let..in` and once with `where`. You should as a minimum calculate the discriminant in your `let` or `where` part.
 
 Make the function
 =================

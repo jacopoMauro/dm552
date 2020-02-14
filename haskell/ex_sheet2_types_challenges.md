@@ -79,7 +79,7 @@ Two examples of this could be:
 Make the function
 =================
 
-For the following functions, write the type for the ones thatt are missing it, and implement all of them. You are welcome to use functions you have seen or made previously (this does not include `:t`).
+For the following functions, write the type for the ones that are missing it, and implement all of them. You are welcome to use functions you have seen or made previously (this does not include `:t`).
 
 -   `second`, takes a list and returns the second element.
 -   `secondLast`, takes a list and returns the second to last element,

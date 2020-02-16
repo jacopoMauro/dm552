@@ -292,7 +292,7 @@ There are hints to how to think about the solution, as syntax is
 probably still a significant obstacle, but try to notice how to think
 about problems still.
 
--   Mergesort. (Hint: We need a merge procedure that takes to sorted
+-   Mergesort. (Hint: We need a merge procedure that takes two sorted
     lists and creates one combined sorted list. Base cases are either
     list being empty. For the algorithm that solves the problem, it
     should `take` the first half and sort recursively and to take the

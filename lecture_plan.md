@@ -6,6 +6,7 @@
 1. [10.02] Abstract machines, interpreter, compiler, partial evaluation, syntax and semantics (Chapters 1,2 PL)
 1. [12.02] Where, let, case of, beginning of higher order functions (Chapters 3,4,5 LYH)
 1. [18.02] Undecidability, Church Thesis, Names, Environment, Scoping Rules (Chapter 3, 4 PL)
+1. [20.02] Higher order functions, foldr, foldl, folds and infinite lists (Chapter 5 LYH)
 
 # Exercise sessions
 

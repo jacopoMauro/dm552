@@ -7,6 +7,7 @@
 1. [12.02] Where, let, case of, beginning of higher order functions (Chapters 3,4,5 LYH)
 1. [18.02] Undecidability, Church Thesis, Names, Environment, Scoping Rules (Chapter 3, 4 PL)
 1. [20.02] Higher order functions, foldr, foldl, folds and infinite lists (Chapter 5 LYH)
+1. [26.03] Declarations and Recursion, Memory management, Activation Records, Static scoping implementation (Chapter 4, 5 PL) 
 
 # Exercise sessions
 

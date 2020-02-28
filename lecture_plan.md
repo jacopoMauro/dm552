@@ -14,4 +14,5 @@
 
 1. [10.02] Install, basics, functions, pattern matching, lists & list comprehensions; Sheet 1 up until 2.3 "Lists, revisited (list comprehensions)" (included). {Chapter 1, 3 and 4 LYH}
 1. [17.02] Tuples, mergesort + insertionsort, types, let & where, more functions; Rest of sheet 1, sheet 2 up until 4 "Make the function" (included). {Chapter 1, 2, 3 and 4 LYH}
-
+1. [27.02] More of - recursive functions, tuples, list comprehensions and let & where. Beginning higher-order functions, own implementation of map, filter and folds; Rest of sheet 2, sheet 3 up until 1.3 "Fold" (The first three exercises). {Chapter 3, 4 and 5 LYH}
+1. [04.03 or 05.03] More higher-order functions/folds and modules. Beginning of defining own types; Rest of sheet 3, sheet 4 up until 1.2.1 "Persons" (EXCLUDED). {Chapter 5, 6 and 7 LYH}

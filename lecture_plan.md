@@ -9,6 +9,7 @@
 1. [20.02] Higher order functions, foldr, foldl, folds and infinite lists (Chapter 5 LYH)
 1. [26.02] Declarations and Recursion, Memory management, Activation Records, Static scoping implementation (Chapter 4, 5 PL)
 1. [28.02] $, functional compositions, imports, modules, basic type definition, record notation (Chapter 5, 6, 7 LYH)
+1. [04.03] Implementation of Dynamic scoping, expressions, commands until loops (Chapter 5, 6 PL)
 
 # Exercise sessions
 

@@ -13,12 +13,17 @@ Go through the shapes example in LYH.
 A shape is either a cirle or a rectangle.
 
 -   Circles are defined by x and y coordinates and a radius.
--   Rectangles are defined by their upper left corner and lower right
+-   Rectangles are defined by their lower left corner and upper right
     corner.
--   Optional: Update so points are represented by their own class.
--   Make functions that calculate the surface area of a shape.
+-   Update so points are represented by their own class.
+-   Make functions that calculate the surface area of shapes.
 -   Make functions that move the shapes around.
--   Come up with other things to do with shapes.
+-   Write at least one more function that has at least one argument of type `Shape`. E.g.:
+  -   `boundingBox :: Shape -> Shape` that given a circle returns the smallest rectangle that contains it.
+  -   `center :: Shape -> Point` that given a shape returns its center point.
+  -   `moveToOrigin :: Shape -> Shape` that given a shape, centers it on the origin.
+  -   `scale :: Shape -> Float -> Shape` that given a shape and a float, scales it by the float. Optional: make it keep its center (potentially hard).
+- Optional: Expand your shape class with a square type, defined by the lower left corner and the side-length.
 
 Students
 --------
@@ -45,7 +50,7 @@ A person has a name, gender and age.
 -   Make some functions for persons, e.g. greetings based on name,
     gender and/or age.
 -   Update the constructors for students and persons with record syntax
--   Come up with more functions to use on students and/or persons. E.g.:
+-   Write at least one additional function that has students and/or persons as an argument. E.g.:
     -   Given a list of persons, return a list of persons with voting
         rights.
     -   Given a list of students, return a list of students with at

@@ -10,6 +10,7 @@
 1. [26.02] Declarations and Recursion, Memory management, Activation Records, Static scoping implementation (Chapter 4, 5 PL)
 1. [28.02] $, functional compositions, imports, modules, basic type definition, record notation (Chapter 5, 6, 7 LYH)
 1. [04.03] Implementation of Dynamic scoping, expressions, commands until loops (Chapter 5, 6 PL)
+1. [06.03] Type keyword, type classes, type instances, Functor type class and type constructors (Chapter 7 LYH)
 
 # Exercise sessions
 

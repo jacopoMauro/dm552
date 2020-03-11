@@ -11,6 +11,7 @@
 1. [28.02] $, functional compositions, imports, modules, basic type definition, record notation (Chapter 5, 6, 7 LYH)
 1. [04.03] Implementation of Dynamic scoping, expressions, commands until loops (Chapter 5, 6 PL)
 1. [06.03] Type keyword, type classes, type instances, Functor type class and type constructors (Chapter 7 LYH)
+1. [11.03] Recursion and tail recursion, parameter passing, deep binding, shallow binding (Chapter 6, 7 PL)
 
 # Exercise sessions
 

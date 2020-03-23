@@ -79,22 +79,33 @@ assumptions. This may be fast if you made a great solution initially.
 
 Things you may consider improving:
 
+-   Handle the exception arising if the input file doesn't exist.
 -   If you assumed the players came in ordered like `['A'..]`, you could
     change it so it works for any order of players, such as `"BXM"`, or
     even `"bXm"`.
 -   Improve the printing of the result, so it shows more like the
     example.
 
+Lazy IO and Exceptions
+======================
+
 Lazy IO
-=======
+-------
 
 Make two programs, one that gets the contents of a file, and prints the
 first character, and another one that prints the last character of that
 file.
 
-Use some kind of time tool, and see the difference in time when running
+Use some kind of time tool (such as `time` on Linux), and see the difference in time when running
 the programs on a large file, such as the `lipsum.txt` file uploaded
 here.
+
+Exceptions
+----------
+
+The `try` and `catch` functions from `System.IO.Error` are deprecated, use the `try` and `catch` functions from `Control.Exception` instead. The examples from LYH should work if you simply change the import.
+
+Make a handler for IOErrors such as a given filename not corresponding to an actual file. You can extend one of the programs from the previous exercises.
 
 Another game: Nim
 =================
@@ -105,9 +116,8 @@ round the current player must take a number of items in some range, say,
 1-4 items. The goal is to not take the last item, so the range does not
 include 0.
 
-You should implement this game, you can decide on the rules to play by,
-or let them be decided at the beginning of the game. The program should
-write the number of items left after each player has had their turn.
+You should implement this game, you can decide on the rules to play by, i.e. how many items in the pile, whether you win or lose when you take the last item, etc.
+The program should write the number of items left after each player has had their turn.
 
 To save some time, you don't need to think about which players turn it
 is, the people playing it can keep track of that themselves.
@@ -190,11 +200,8 @@ Monads
 ======
 
 Note that LYH says that you do not need to make your type an instance of
-`Applicative` to make an instance of `Monad`, but THIS IS NOT TRUE in
-recent versions of GHC this is a requirement.
-
-Monads are much like applicative functors, but they also start to make a
-lot more sense, in my opinion.
+`Applicative` to make an instance of `Monad`, but THIS IS NOT TRUE - in
+recent versions of GHC this is a requirement!
 
 Make sure you've read and followed along the example in "Walk the
 line" in chapter 11 which shows one way to utilize the `Maybe` monad.
@@ -356,25 +363,3 @@ Monad laws
 -   What are the monad laws?
 -   Check that the laws hold for the `Maybe` and list monads.
 
-Monoids
-=======
-
-Remind yourself of what monoids are.
-
--   What is the binary function of the `Sum` monoid (found in
-    `Data.Monoid`)? What is the identity?
-    -   Desugar `` getSum $ (Sum 13 `mappend` Sum 29) ``. What is the
-        result?
--   What is the binary function of the `All` monoid? What is the
-    identity?
--   `foldMap` takes a monoid constructor and a `Foldable` (such as a
-    list), and maps the constructor on the values, while folding with
-    `mappend`.
-    -   What is the value of `getAll $ foldMap All [True, False, True]`?
-
-Use this implementation of `foldMap`:
-
-```haskell
-    foldMap :: Monoid m => (a -> m) -> t a -> m
-    foldMap f = foldr (mappend . f) mempty
-```

@@ -1,3 +1,6 @@
+Be aware that the section on I/O differs a lot between the PDF and the web version, especially the part on exception handling. The PDF is the version we are officially following.
+If you have read in the web version, a quick heads up, the `catch` function from `System.IO.Error` is deprecated, use the and `catch` functions from `Control.Exception` instead. The examples from the web version should work if you simply change the import. 
+
 Hello, World!
 =============
 
@@ -6,6 +9,7 @@ Hello, World!
     greets that person.
 -   Write a program that counts the number of lines read from stdin
 -   Write a program that transforms text from stdin to upper case.
+-   Rewrite one of the previous programs to take their input from a file, with the filename given as a command line argument.
 
 Scoreboard
 ==========
@@ -79,15 +83,14 @@ assumptions. This may be fast if you made a great solution initially.
 
 Things you may consider improving:
 
--   Handle the exception arising if the input file doesn't exist.
 -   If you assumed the players came in ordered like `['A'..]`, you could
     change it so it works for any order of players, such as `"BXM"`, or
     even `"bXm"`.
 -   Improve the printing of the result, so it shows more like the
     example.
 
-Lazy IO and Exceptions
-======================
+Lazy IO and Bracket
+===================
 
 Lazy IO
 -------
@@ -100,12 +103,18 @@ Use some kind of time tool (such as `time` on Linux), and see the difference in 
 the programs on a large file, such as the `lipsum.txt` file uploaded
 here.
 
-Exceptions
-----------
+Bracket
+-------
 
-The `try` and `catch` functions from `System.IO.Error` are deprecated, use the `try` and `catch` functions from `Control.Exception` instead. The examples from LYH should work if you simply change the import.
+Write a program that uses `bracket` to open and close a file, and for the "main" part counts the number of lines in the file.
+-   Add "debug" information to the opening and closing of the file so you can follow what happens, i.e. when opening the file it outputs something like "Opened a file".
+-   What happens when an error occurs in the "main" part?
 
-Make a handler for IOErrors such as a given filename not corresponding to an actual file. You can extend one of the programs from the previous exercises.
+Try changing the `bracket` to `bracketOnError`
+-   What happens now when there is no error in the main part?
+-   What happens when there is an error in the main part?
+-   What happens when there is an error in the first part, e.g. the file does not exist?
+
 
 Another game: Nim
 =================

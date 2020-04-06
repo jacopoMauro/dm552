@@ -12,6 +12,10 @@
 1. [04.03] Implementation of Dynamic scoping, expressions, commands until loops (Chapter 5, 6 PL)
 1. [06.03] Type keyword, type classes, type instances, Functor type class and type constructors (Chapter 7 LYH)
 1. [11.03] Recursion and tail recursion, parameter passing, deep binding, shallow binding (Chapter 6, 7 PL)
+1. [30.03] Online lecture - Introduction on new teaching modality, parameter passing, basic types (Chapter 7, 8 PL)
+1. [01.04] Online lecture - Haskell IO (Chapter 8, 9 LYH)
+1. [03.04] Online lecture - Exceptions, Type equality and compatibility, Polymorphism, Type Inference, (Chapter 7, 8 PL)
+1. [17.04] Online lecture - Functors and Monads (Chapter 11 and 13 LYH)
 
 # Exercise sessions
 

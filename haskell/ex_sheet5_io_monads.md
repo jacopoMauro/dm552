@@ -115,6 +115,11 @@ Try changing the `bracket` to `bracketOnError`
 -   What happens when there is an error in the main part?
 -   What happens when there is an error in the first part, e.g. the file does not exist?
 
+Try
+-----
+
+Use the `try` or `tryJust` function from `Control.Exception` ([https://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Exception.html#g:7](https://hackage.haskell.org/package/base-4.12.0.0/docs/Control-Exception.html#g:7)) to recover from an error, e.g. an expected command line argument, or a file not existing.
+
 
 Another game: Nim
 =================

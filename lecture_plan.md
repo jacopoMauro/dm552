@@ -16,6 +16,12 @@
 1. [01.04] Online lecture - Haskell IO (Chapter 8, 9 LYH)
 1. [03.04] Online lecture - Exceptions, Type equality and compatibility, Polymorphism, Type Inference, (Chapter 7, 8 PL)
 1. [17.04] Online lecture - Functors and Monads (Chapter 11 and 13 LYH)
+1. [21.04] Online lecture - Type inference, ADT (Chapter 9 PL)
+1. [24.04] Online lecture - Monads (Chapter 14 LYH)
+1. [28.04] Online lecture - Objects (Chapter 10 PL)
+1. [01.05] Online lecture - Hints on Monad Transformers and Q/A
+1. [05.05] Online lecture - Q/A
+
 
 # Exercise sessions
 

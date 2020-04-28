@@ -252,6 +252,113 @@ Once you've made `Future` into a monad, try "desugaring"
       x <- m
       return (x*2)
 ```
+
+The Maybe monad
+===============
+These exercises are heavily inspired by the [All About Monads](https://wiki.haskell.org/All_About_Monads) article on the Haskell wiki.
+
+Suppose you have some historic data about the heritage of some people, and you want to write a program to make some queries about them, e.g. "Who is the father of the mother of this person?". For each person you are given their name and their parents, but the data is incomplete, so some parents are missing. Therefore we use `Maybe` values to represent the parents.
+
+We write the following data type.
+```haskell
+data Person = Person { name :: String,
+                       father :: Maybe Person,
+                       mother :: Maybe Person
+                     } deriving Show
+```
+Remember, the record syntax means we now have the functions `name :: Person -> String`, `father :: Person -> Maybe Person`, and `mother :: Person -> Maybe Person`.
+
+- Optional: Remove the `deriving Show`, and instead make your own implementation of the instance, e.g. with `show = name`.
+
+In figure 1 there is some data you can work with. Casper & Shakira and Kobe & Husna are the main ancestors, with Kaan and Aubree as children respectively, in other words, an arc goes from a parent to a child.
+
+![Family tree](tree.png)
+
+In the program, this has been modeled from child to parents instead:
+
+```haskell
+-- Female
+shakira = Person "Shakira" Nothing Nothing
+husna   = Person "Husna"   Nothing Nothing
+aubree  = Person "Aubree"  (Just kobe) (Just husna)
+juna    = Person "Juna"    (Just ewan) (Just aubree)
+sarah   = Person "Sarah"   (Just quentin) (Just juna)
+
+-- Male
+casper  = Person "Casper"  Nothing Nothing
+kobe    = Person "Kobe"    Nothing Nothing
+kaan    = Person "Kaan"    (Just casper) (Just shakira)
+ewan    = Person "Ewan"    Nothing Nothing
+quentin = Person "Quentin" (Just kaan) Nothing
+```
+
+- Write a function that returns the paternal grandmother of a person, i.e. their father's mother.
+`paternalGrandmother :: Person -> Maybe Person`
+
+- Write a function `mothersMaternalGrandfather :: Person -> Maybe Person`, that returns the mother's mother's father of a person.
+
+What might make writing these functions a little tedious is that we'd like to use our `father` and `mother` functions, but they only work for `Person`s and we keep getting `Maybe Person`s instead.
+A solution could be to write a `Maybe Person -> Maybe Person` function, for each `Person -> Maybe Person` function. If we did that, we might realize that it works the same, every time: If the given `Maybe Person` is `Nothing` we have nothing to compute and return `Nothing`, otherwise we have a `Just p` and we can apply the function to `p`.
+
+So instead we will make a function that helps us unwrap the `Person` from the `Maybe` and applies the function, whenever it can.
+
+- Write a function `withMaybe :: Maybe Person -> (Person -> Maybe Person) -> Maybe Person` that applies the given function if possible, as described.
+
+Now, to write `maternalGrandfather` we can just do:
+```haskell
+maternalGrandfather p    = (mother p) `withMaybe` father
+```
+
+And because the result of using `withMaybe` is again a `Maybe Person` we can chain them as long as we want:
+```haskell
+fathersMothersMothersFather p    = (father p) `withMaybe` mother `withMaybe` mother `withMaybe` father
+```
+Note that the function is doubly cool, not only can we chain the functions, but a `Nothing` at any point, correctly stops the further computation.
+
+And if we really like our new function, or just prefer all the functions being on the right of the initial `p`, we can make `p` to a `Maybe Person` using `Just`.
+```haskell
+fathersPaternalGrandmother p    = (Just p) `withMaybe` father `withMaybe` father `withMaybe` mother
+```
+
+- Write a `femaleRolemodel` function that given a person, returns the closest female ancestor if one exists, i.e. their mother, or paternalGrandmother, or fathersPaternalGrandmother, etc. For Sarah this is Juna, but for Quentin, this is Shakira. 
+This exercise is a little different than the previous, you can use anything you've learnt so far. Hint: the `isJust` function from `Data.Maybe` could be useful.
+
+While working on another project with databases, you notice you have a lot of functions that look like `queryXY :: X -> Maybe Y` that you would like to chain, and it reminds you of the `withMaybe` function you made. You realize `withMaybe` does not rely on the `Person` type, except for in the signature, so you can generalize it to:
+
+```haskell
+withMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b
+Nothing  `withMaybe` _    = Nothing
+(Just x) `withMaybe` f    = f x
+```
+
+At this point, you have pretty much rediscovered the monad, without maybe thinking too much about it.
+
+Monads are a generalization of that pattern, where the `withMaybe` function is called bind and looks like `>>=` instead. Additionally, one must provide a way to get a value to a minimal context, for `Maybe` we do it with `Just`.
+
+```haskell
+class Monad m where
+  (>>=) :: m a -> (a -> m b) -> m b
+  return :: a -> m a
+
+instance Monad Maybe where
+  Nothing  >>= _    = Nothing
+  (Just x) >>= f    = f x
+```
+
+- Write `paternalGrandmother` and `fathersMaternalGrandmother` functions using `return` and `>>=`.
+
+- Desugar the value of `(return sarah) >>= mother`.
+
+- Desugar the value of `bar quentin` and `bar ewan` where definition of `bar` is:
+```haskell
+bar mp = do
+  p <- mp
+  f <- father p
+  return f
+```
+
+- Optional (list monad): make a function `parents :: Person -> [Person]` that returns a list of the parents to a given person. Hint: `maybeToList` from `Data.Maybe` could be useful.
+
 The list monad
 ==============
 
@@ -285,15 +392,29 @@ implementation.
 
     foo = "abc" >>= \c -> [toUpper c, toLower c]
 ```
--   Desugar the value of `bar [3,4,5]` where
+
+-   Desugar the value of `bar`. What is its type signature?
 
 ```haskell
-    bar :: [Int] -> [Int]
-    bar xs = do
+bar = do
+    c <- "abc"
+    d <- [1,2,3]
+    return (c, d)
+```
+
+-   Desugar the value of `baz [3,4,5]` where
+
+```haskell
+    baz :: [Int] -> [Int]
+    baz xs = do
       x <- xs
       [1,2]           -- Equivalent to _ <- [1,2]
       return x
 ```
+
+-   Write a function `makeTriples :: [a] -> [b] -> [c] -> [(a, b, c)]` using do-notation, 
+  such that it returns a list of all triples (a,b,c) where `a` is from the first list, `b` is from the second, and `c` is from the third.
+  For a call `l = makeTriples as bs cs` it should hold that `head l = (head as, head bs, head cs)` and `last l = (last as, last bs, last cs)`.
 
 -   Write a function that uses `do`-notation to double the value of all
     numbers in a list.
@@ -301,7 +422,7 @@ implementation.
 -   Write a function that uses `do`-notation to make gibberish from a
     string. The gibberish should come from repeating each letter with an
     'o' in between, e.g. the string "b" becomes "bob" and the
-    string "bat" becomes "bobaoato".
+    string "bat" becomes "bobaoatot".
 
     -   Feel free to change the letter inserted in between or making
         sure only consonants are repeated.

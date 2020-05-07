@@ -33,4 +33,9 @@ Yes. That is OK.
 
 Yes.
 
-
+#### I am having issues with `File not found` or odd tests are executed, during `stack test`.
+Try checking for hidden files in the `unit_tests` folder, and subfolders. These hidden files will be seen as test files, and give errors. 
+A solution can sometimes be to change line 19 in `test/Spec.hs` to:
+```Haskell
+getAllBaseNames dir = liftM (map (dir </>) . Data.Set.toList . Data.Set.fromList . (filter (not.null) ) . map takeBaseName) (listDirectory dir)
+```

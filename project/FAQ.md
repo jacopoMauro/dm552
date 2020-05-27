@@ -58,3 +58,7 @@ generateRandom function. If you end up in a situation were the player can not do
 any legal move, you can stop the generation of the moves even before reaching
 the target number of moves.
 
+#### How is NonValid X formatted?
+
+X corresponds to a move, e.g. ((0,0),(1,1),"Cobra"), so it should output:
+`NonValid ((0,0),(1,1),"Cobra")`

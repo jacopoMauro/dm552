@@ -25,14 +25,14 @@ familiar with the functional programming paradigm.
 
 [Jacopo Mauro](https://imada.sdu.dk/~mauro/)
 
-Contact email: mauro@sdu.dk
+Contact email: mauro@imada.sdu.dk
 
 Office [Ø13-604a-2](https://clients.mapsindoors.com/sdu/573f26e4bc1f571b08094312/details/563cb9aa423b7d0540c9a90a)
 
 ## Teaching Assistant
 
-* Jonas Bamse Andersen (jonan15@student.sdu.dk)
-* Henrik Sejer Pedersen (henpe15@student.sdu.dk)
+* Johan Ringmann Fagerberg (jofag17@student.sdu.dk)
+* Lovro Lugovic (lugovic@imada.sdu.dk )
 
 ## Course Material
 
@@ -62,11 +62,13 @@ Additional interesting books to know a bit more on Haskell (optional):
 
 ## Exam
 
-To complete the course the student has to pass a written exam having questions
-covering all the topics presented in class. The written exam will be evaluated
-using a 7 grades scale with the collaboration of an external examiner. No
-external auxiliary material (e.g., books, personal notes) will be allowed to be
-used during the exam.
+To access the exam, students will have to submit and pass as a pre-requisite a
+project assignment, i.e., and Haskell program.
+
+Finally, to complete the course the student has to pass a written exam having
+questions covering all the topics presented in class. The written exam will be
+evaluated using a 7 grades scale. No external auxiliary material (e.g., books,
+personal notes) will be allowed to be used during the exam.
 
 
 

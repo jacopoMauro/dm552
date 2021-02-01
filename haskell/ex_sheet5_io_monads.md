@@ -1,5 +1,5 @@
 Be aware that the section on I/O differs a lot between the PDF and the web version, especially the part on exception handling. The PDF is the version we are officially following.
-If you have read in the web version, a quick heads up, the `catch` function from `System.IO.Error` is deprecated, use the and `catch` functions from `Control.Exception` instead. The examples from the web version should work if you simply change the import. 
+The web version uses the `catch` function from `System.IO.Error` which is deprecated. Instead you should use the `try` and `catch` functions from `Control.Exception`. The examples from the web version should work if you simply change the import.
 
 Hello, World!
 =============

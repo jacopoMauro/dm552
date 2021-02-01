@@ -78,7 +78,7 @@ a list is sorted:
 
 ```haskell
 isSorted :: Num a => [a] -> Bool
-isSorted ls = foldr1 (<=) ls`
+isSorted ls = foldr1 (<=) ls
 ```
 
 but using it throws an error. Why is that? What should it do instead?

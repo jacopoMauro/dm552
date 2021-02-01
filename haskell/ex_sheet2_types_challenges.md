@@ -37,7 +37,7 @@ constraint, and instead see the type `t a` as `[a]`. Make your guess first, then
 Let and where
 =============
 
-For some functions it is highly advantageous to use `let..in` or `where`. 
+For some functions it is highly advantageous to use `let..in` or `where`.
 
 E.g.
 ```haskell
@@ -55,7 +55,7 @@ Or equivalently, with `let..in`
 ```haskell
 maximum :: Ord a -> [a] -> a
 maximum [x]    = x
-maximum (x:xs) = 
+maximum (x:xs) =
     let
         y = maximum xs
     in case (x < y) of

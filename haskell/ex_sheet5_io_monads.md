@@ -323,7 +323,7 @@ And if we really like our new function, or just prefer all the functions being o
 fathersPaternalGrandmother p    = (Just p) `withMaybe` father `withMaybe` father `withMaybe` mother
 ```
 
-- Write a `femaleRolemodel` function that given a person, returns the closest female ancestor if one exists, i.e. their mother, or paternalGrandmother, or fathersPaternalGrandmother, etc. For Sarah this is Juna, but for Quentin, this is Shakira. 
+- Write a `femaleRolemodel` function that given a person, returns the closest female ancestor if one exists, i.e. their mother, or paternalGrandmother, or fathersPaternalGrandmother, etc. For Sarah this is Juna, but for Quentin, this is Shakira.
 This exercise is a little different than the previous, you can use anything you've learnt so far. Hint: the `isJust` function from `Data.Maybe` could be useful.
 
 While working on another project with databases, you notice you have a lot of functions that look like `queryXY :: X -> Maybe Y` that you would like to chain, and it reminds you of the `withMaybe` function you made. You realize `withMaybe` does not rely on the `Person` type, except for in the signature, so you can generalize it to:
@@ -369,7 +369,7 @@ For this exercise assume the following is the definition of `Monad` (as
 shown in LYH), along with the instance for lists:
 
 ```haskell
-    class Monad m where  
+    class Monad m where
         return :: a -> m a
 
         (>>=) :: m a -> (a -> m b) -> m b
@@ -377,7 +377,7 @@ shown in LYH), along with the instance for lists:
         (>>) :: m a -> m b -> m b
         x >> y = x >>= \_ -> y
 
-        fail :: String -> m a  
+        fail :: String -> m a
         fail msg = error msg
 
     instance Monad [] where
@@ -415,7 +415,7 @@ bar = do
       return x
 ```
 
--   Write a function `makeTriples :: [a] -> [b] -> [c] -> [(a, b, c)]` using do-notation, 
+-   Write a function `makeTriples :: [a] -> [b] -> [c] -> [(a, b, c)]` using do-notation,
   such that it returns a list of all triples (a,b,c) where `a` is from the first list, `b` is from the second, and `c` is from the third.
   For a call `l = makeTriples as bs cs` it should hold that `head l = (head as, head bs, head cs)` and `last l = (last as, last bs, last cs)`.
 
@@ -436,7 +436,7 @@ The State Monad
 As with the last exercise we have the following assumption:
 
 ```haskell
-    class Monad m where  
+    class Monad m where
         return :: a -> m a
 
         (>>=) :: m a -> (a -> m b) -> m b
@@ -444,7 +444,7 @@ As with the last exercise we have the following assumption:
         (>>) :: m a -> m b -> m b
         x >> y = x >>= \_ -> y
 
-        fail :: String -> m a  
+        fail :: String -> m a
         fail msg = error msg
 
     newtype State s a = State { runState :: s -> (a,s) }
@@ -500,4 +500,3 @@ Monad laws
 
 -   What are the monad laws?
 -   Check that the laws hold for the `Maybe` and list monads.
-

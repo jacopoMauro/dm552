@@ -34,7 +34,7 @@ Filter
 ------
 
 Remember that `filter` keeps the elements that match the predicate,
-rather than exclude them. 
+rather than exclude them.
 
 -   Make your own implementation of filter for lists, `myfilter`.
 
@@ -62,7 +62,7 @@ following expressions by hand, according to the pseudo definitions:
 -   `foldr (||) False [False, True, False]`
 -   `foldl mod 1337 [1166, 86, 43]`
 
--   Make your own fold function for lists, e.g. `myfoldl` (which probably is slightly easier than `myfoldr`). 
+-   Make your own fold function for lists, e.g. `myfoldl` (which probably is slightly easier than `myfoldr`).
 
 Now try to use `foldr`, `foldl`, or your own fold function, to solve the following exercises.
 
@@ -95,7 +95,7 @@ and lambda, in `zipWith`.
 myfilter' :: (a -> Bool) -> [a] -> [a]
 myfilter' p l = foldl1 (++) (map foo l)
   where
-    foo x = 
+    foo x =
 ```
 
 Modules Beginning
@@ -145,4 +145,3 @@ the same name for your file as your module, e.g. you export a module
 
 Import and use your functions in another file. If you named your files
 correctly, you should be able to do something like `import MyFuncs`.
-

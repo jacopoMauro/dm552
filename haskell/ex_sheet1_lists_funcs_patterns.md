@@ -113,7 +113,7 @@ in parentheses and add 1 to that.
 
 For many exercises from now on, I recommend writing the program in a
 file and loading it in. But if you want to try something out, always
-feel free to try it in the interpreter first. 
+feel free to try it in the interpreter first.
 
 ### Lists
 
@@ -309,4 +309,3 @@ about problems still.
     function as well that inserts an element into a sorted list. Note
     that there are better methods of doing insertionsort, but this is
     for practicing the thinking.)
-

@@ -20,12 +20,11 @@ jobs:
         uses: jitterbit/get-changed-files@v1
       - name: Compile PDFs
         run: |
-          for changed_file in ${{ steps.files.outputs.all }}; do
-            echo "Checking file $changed_file"
-            if [[ $changed_file == *.md ]]; then
-              target="${changed_file%.*}"
-              echo "Converting $target"
-              pandoc --pdf-engine=tectonic -o $target.pdf $target.md
+          for changed_file in ${{ steps.files.outputs.added_modified }} ${{ steps.files.outputs.renamed }}; do
+            output="${changed_file%.*}.pdf"
+            if [[ $changed_file == *.md && -f $output ]]; then
+              echo "Converting file $changed_file"
+              pandoc --pdf-engine=tectonic -N -o $output $changed_file
             fi
           done
       - name: Upload PDFs
@@ -34,13 +33,12 @@ jobs:
           git status
           git config --local user.name "github-actions[bot]"
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add **/*.pdf
+          git ls-files --modified | xargs git add
           if git diff --cached --exit-code; then
             echo "Exiting because no files are added"
             exit 0
           fi
-          GIT_SHORTMSG=$(git show -s --format=%s "$GITHUB_SHA")
           GIT_SHORTSHA=$(echo "$GITHUB_SHA" | cut -c 1-8)
-          git commit -m "$GIT_SHORTMSG ($GIT_SHORTSHA)"
+          git commit -m "Generate PDFs for $GIT_SHORTSHA"
           git push
         

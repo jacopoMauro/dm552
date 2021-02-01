@@ -67,11 +67,11 @@ in `let..in` we ended up using `case..of`. However, both `where` and `let..in`
 can, and often should, be used regardless of the need for different cases.
 
 To familiarize yourself with `let..in` and `where` make a function that
-calculates the roots of a quadratic equation (andengradsligning -
-https://en.wikipedia.org/wiki/Quadratic_formula), i.e. given the coefficients a,
-b and c, calculate the roots x1 and x2 (assume there are two, and let the answer
-be given as a tuple). The function should have a signature similar to `roots ::
-Floating t => t -> t -> t -> (t,t)`.
+calculates the roots of a quadratic equation
+([andengradsligning](https://en.wikipedia.org/wiki/Quadratic_formula)), i.e.
+given the coefficients a, b and c, calculate the roots x1 and x2 (assume there
+are two, and let the answer be given as a tuple). The function should have a
+signature similar to `roots :: Floating t => t -> t -> t -> (t,t)`.
 
 Two examples of this could be:
 ```haskell

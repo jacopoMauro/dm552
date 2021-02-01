@@ -1,0 +1,46 @@
+name: Markdown to PDF
+on: push
+
+jobs:
+  markdown_to_pdf:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Install Pandoc
+        uses: r-lib/actions/setup-pandoc@v1
+        with:
+          pandoc-version: '2.11.4'
+      - name: Install Tectonic
+        uses: wtfjoke/setup-tectonic@v1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Get changed files
+        id: files
+        uses: jitterbit/get-changed-files@v1
+      - name: Compile PDFs
+        run: |
+          for changed_file in ${{ steps.files.outputs.all }}; do
+            echo "Checking file $changed_file"
+            if [[ $changed_file == *.md ]]; then
+              target="${changed_file%.*}"
+              echo "Converting $target"
+              pandoc --pdf-engine=tectonic -o $target.pdf $target.md
+            fi
+          done
+      - name: Upload PDFs
+        if: ${{ success() }}
+        run: |
+          git status
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add **/*.pdf
+          if git diff --cached --exit-code; then
+            echo "Exiting because no files are added"
+            exit 0
+          fi
+          GIT_SHORTMSG=$(git show -s --format=%s "$GITHUB_SHA")
+          GIT_SHORTSHA=$(echo "$GITHUB_SHA" | cut -c 1-8)
+          git commit -m "$GIT_SHORTMSG ($GIT_SHORTSHA)"
+          git push
+        

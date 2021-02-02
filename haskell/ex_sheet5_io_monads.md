@@ -309,18 +309,18 @@ So instead we will make a function that helps us unwrap the `Person` from the `M
 
 Now, to write `maternalGrandfather` we can just do:
 ```haskell
-maternalGrandfather p    = (mother p) `withMaybe` father
+maternalGrandfather p = (mother p) `withMaybe` father
 ```
 
 And because the result of using `withMaybe` is again a `Maybe Person` we can chain them as long as we want:
 ```haskell
-fathersMothersMothersFather p    = (father p) `withMaybe` mother `withMaybe` mother `withMaybe` father
+fathersMothersMothersFather p = (father p) `withMaybe` mother `withMaybe` mother `withMaybe` father
 ```
 Note that the function is doubly cool, not only can we chain the functions, but a `Nothing` at any point, correctly stops the further computation.
 
 And if we really like our new function, or just prefer all the functions being on the right of the initial `p`, we can make `p` to a `Maybe Person` using `Just`.
 ```haskell
-fathersPaternalGrandmother p    = (Just p) `withMaybe` father `withMaybe` father `withMaybe` mother
+fathersPaternalGrandmother p = (Just p) `withMaybe` father `withMaybe` father `withMaybe` mother
 ```
 
 - Write a `femaleRolemodel` function that given a person, returns the closest female ancestor if one exists, i.e. their mother, or paternalGrandmother, or fathersPaternalGrandmother, etc. For Sarah this is Juna, but for Quentin, this is Shakira.

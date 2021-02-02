@@ -24,7 +24,7 @@ jobs:
             output="${changed_file%.*}.pdf"
             if [[ $changed_file == *.md && -f $output ]]; then
               echo "Converting file $changed_file"
-              pandoc --pdf-engine=tectonic -N -o $output $changed_file
+              pandoc --resource-path=`dirname $changed_file`:. --pdf-engine=tectonic -N -o $output $changed_file
             fi
           done
       - name: Upload PDFs

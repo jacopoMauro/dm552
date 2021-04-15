@@ -95,12 +95,10 @@ foldT f z (Node k l r) = f k (foldT f z l) (foldT f z r)
     function was defined this way.
 -   Define `f` such that `sizeT = foldT f 0` returns the number of nodes
     in the tree.
--   Define `f` such that `sumT = foldT f 0` returns the number of nodes
+-   Define `f` such that `sumT = foldT f 0` returns the sum of nodes
     in the tree.
--   Define `f` such that `heightT = foldT f 0` returns the number of
-    nodes in the tree.
--   Define `f` such that `flattenT = foldT f []` returns the number of
-    nodes in the tree.
+-   Define `f` such that `heightT = foldT f 0` returns the height of the tree.
+-   Define `f` such that `flattenT = foldT f []` returns the tree as a sorted list.
 
 Playing games
 =============

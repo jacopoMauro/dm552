@@ -31,7 +31,7 @@ Office [Ø13-604a-2](https://clients.mapsindoors.com/sdu/573f26e4bc1f571b0809431
 
 ## Teaching Assistant
 
-* Johan Ringmann Fagerberg (jofag17@student.sdu.dk)
+* Jonas Stisen (josti15@student.sdu.dk)
 * Lovro Lugovic (lugovic@imada.sdu.dk )
 
 ## Course Material

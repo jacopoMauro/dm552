@@ -15,7 +15,7 @@ A shape is either a cirle or a rectangle.
 -   Circles are defined by x and y coordinates and a radius.
 -   Rectangles are defined by their lower left corner and upper right
     corner.
--   Update so points are represented by their own class.
+-   Update so points are represented by their own type.
 -   Make functions that calculate the surface area of shapes.
 -   Make functions that move the shapes around.
 -   Write at least one more function that has at least one argument of type `Shape`. E.g.:
@@ -23,7 +23,7 @@ A shape is either a cirle or a rectangle.
   -   `center :: Shape -> Point` that given a shape returns its center point.
   -   `moveToOrigin :: Shape -> Shape` that given a shape, centers it on the origin.
   -   `scale :: Shape -> Float -> Shape` that given a shape and a float, scales it by the float. Optional: make it keep its center (potentially hard).
-- Optional: Expand your shape class with a square type, defined by the lower left corner and the side-length.
+- Optional: Expand your shape type with a square type, defined by the lower left corner and the side-length.
 
 Students
 --------
@@ -39,7 +39,7 @@ grades.
 
 ### Persons
 
-Rather than students directly, make a class for persons.
+Rather than students directly, make a type for persons.
 
 A person has a name, gender and age.
 
